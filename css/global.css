@@ -1,0 +1,375 @@
+/* ============================================================
+   Global Blessings Mission RCFE — Design System
+   "Quiet Luxury, Built for Rest"
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+/* Pretendard via CDN */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
+/* ============================================================
+   1. CSS Variables
+   ============================================================ */
+:root {
+  /* Colors */
+  --ivory:        #F7F2E9;
+  --walnut:       #2B2622;
+  --gold:         #B8893B;
+  --gold-light:   #D4A855;
+  --sage:         #5E7E5E;
+  --sage-light:   #7FA07F;
+  --forest:       #2C3A2E;
+  --stone:        #E8E0D5;
+  --stone-mid:    #C8BEB4;
+  --white:        #FFFFFF;
+  --overlay:      rgba(43, 38, 34, 0.55);
+
+  /* Typography */
+  --font-display-en: 'Fraunces', Georgia, serif;
+  --font-body-en:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display-kr: 'Noto Serif KR', 'Malgun Gothic', serif;
+  --font-body-kr:    'Pretendard Variable', 'Apple SD Gothic Neo', sans-serif;
+
+  /* Active fonts (switched by lang toggle) */
+  --font-display: var(--font-display-en);
+  --font-body:    var(--font-body-en);
+
+  /* Type Scale — senior-forward (18px minimum body) */
+  --text-xs:   0.875rem;   /*  14px */
+  --text-sm:   1rem;       /*  16px */
+  --text-base: 1.125rem;   /*  18px — minimum readable */
+  --text-lg:   1.25rem;    /*  20px — standard body */
+  --text-xl:   1.5rem;     /*  24px */
+  --text-2xl:  1.875rem;   /*  30px */
+  --text-3xl:  2.25rem;    /*  36px */
+  --text-4xl:  2.75rem;    /*  44px */
+  --text-5xl:  3.5rem;     /*  56px */
+  --text-hero: 4.5rem;     /*  72px */
+
+  /* Spacing (8px grid) */
+  --space-1:   0.5rem;
+  --space-2:   1rem;
+  --space-3:   1.5rem;
+  --space-4:   2rem;
+  --space-6:   3rem;
+  --space-8:   4rem;
+  --space-10:  5rem;
+  --space-14:  7rem;
+  --space-18:  9rem;
+
+  /* Section padding */
+  --section-py: 8.75rem;   /* 140px desktop */
+  --section-px: 2rem;
+
+  /* Max widths */
+  --container:  1200px;
+  --container-narrow: 800px;
+
+  /* Transitions */
+  --ease-out:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out:  cubic-bezier(0.45, 0, 0.55, 1);
+  --duration-fast: 0.25s;
+  --duration-base: 0.45s;
+  --duration-slow: 0.7s;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 8px rgba(43, 38, 34, 0.08);
+  --shadow-md:  0 8px 32px rgba(43, 38, 34, 0.12);
+  --shadow-lg:  0 24px 64px rgba(43, 38, 34, 0.16);
+}
+
+/* Korean mode overrides */
+html[lang="ko"] {
+  --font-display: var(--font-display-kr);
+  --font-body:    var(--font-body-kr);
+}
+
+/* ============================================================
+   2. Reset & Base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.75;
+  color: var(--walnut);
+  background-color: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+ul, ol { list-style: none; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   3. Typography
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--walnut);
+}
+
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+
+p { font-size: var(--text-lg); line-height: 1.75; }
+
+.text-gold  { color: var(--gold); }
+.text-sage  { color: var(--sage); }
+.text-ivory { color: var(--ivory); }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   4. Layout Utilities
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-py);
+}
+
+.section--dark {
+  background-color: var(--forest);
+  color: var(--ivory);
+}
+.section--dark h2,
+.section--dark h3,
+.section--dark p { color: var(--ivory); }
+
+.section--stone { background-color: var(--stone); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+
+.text-center { text-align: center; }
+
+/* ============================================================
+   5. Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.9rem 2.25rem;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 2px;
+  border: none;
+  transition: all var(--duration-fast) var(--ease-out);
+  min-height: 52px;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--gold);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background-color: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--walnut);
+  border: 1.5px solid var(--walnut);
+}
+.btn--outline:hover {
+  background-color: var(--walnut);
+  color: var(--ivory);
+  transform: translateY(-1px);
+}
+
+.btn--outline-light {
+  background-color: transparent;
+  color: var(--ivory);
+  border: 1.5px solid rgba(247, 242, 233, 0.6);
+}
+.btn--outline-light:hover {
+  background-color: var(--ivory);
+  color: var(--forest);
+}
+
+.btn--sage {
+  background-color: var(--sage);
+  color: var(--white);
+}
+.btn--sage:hover {
+  background-color: var(--sage-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Focus styles — accessibility */
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   6. Gold Divider
+   ============================================================ */
+.gold-rule {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.gold-rule::before,
+.gold-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  max-width: 80px;
+}
+.gold-rule--left::after { display: none; }
+.gold-rule--left::before { max-width: 60px; }
+
+/* ============================================================
+   7. Section Header Pattern
+   ============================================================ */
+.section-header {
+  margin-bottom: var(--space-10);
+}
+.section-header .eyebrow { display: block; margin-bottom: var(--space-2); }
+.section-header h2 { margin-bottom: var(--space-3); }
+.section-header p { color: #6B6259; max-width: 560px; }
+.section-header.center { text-align: center; }
+.section-header.center p { margin-inline: auto; }
+
+/* ============================================================
+   8. Reveal Animations
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   9. Language Toggle
+   ============================================================ */
+.lang-kr { display: none; }
+html[lang="ko"] .lang-en { display: none; }
+html[lang="ko"] .lang-kr { display: revert; }
+
+/* ============================================================
+   10. Mobile Sticky Call Bar
+   ============================================================ */
+.mobile-call-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background-color: var(--forest);
+  padding: var(--space-2) var(--space-4);
+  gap: var(--space-2);
+}
+.mobile-call-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  font-size: var(--text-base);
+  font-weight: 500;
+  border-radius: 2px;
+  min-height: 52px;
+}
+.mobile-call-bar a:first-child {
+  background-color: var(--gold);
+  color: var(--white);
+}
+.mobile-call-bar a:last-child {
+  background-color: transparent;
+  color: var(--ivory);
+  border: 1.5px solid rgba(247,242,233,0.4);
+}
+
+/* ============================================================
+   11. Responsive
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root { --section-py: 6rem; }
+  h1 { font-size: var(--text-5xl); }
+  h2 { font-size: var(--text-3xl); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-py: 5rem;
+    --section-px: 1.25rem;
+  }
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-2xl); }
+  h3 { font-size: var(--text-xl); }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .container { padding-inline: var(--space-3); }
+  .mobile-call-bar { display: flex; }
+  body { padding-bottom: 76px; }
+}

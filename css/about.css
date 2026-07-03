@@ -1,0 +1,36 @@
+/* About Page */
+.about-story img { width:100%;aspect-ratio:4/5;object-fit:cover; }
+.about-story p + p { margin-top: var(--space-3); color: #5C534B; }
+
+.admin-section__grid { gap: var(--space-10); }
+.admin-section__image { position: relative; }
+.admin-section__image img { width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top; }
+.admin-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: var(--forest); color: var(--ivory);
+  padding: var(--space-3) var(--space-4);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.admin-badge span { font-size:var(--text-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--gold); }
+.admin-badge strong { font-size:var(--text-lg);font-family:var(--font-display);font-weight:400; }
+.admin-badge__role { font-family:var(--font-body);font-size:var(--text-xs);color:rgba(247,242,233,.6); }
+.admin-title { font-family:var(--font-display);font-style:italic;color:var(--gold);font-size:var(--text-xl);margin-bottom:var(--space-3); }
+.admin-section__text p + p { margin-top: var(--space-3); color: #5C534B; }
+.admin-cred { display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-6); }
+.admin-cred__item { display:flex;align-items:center;gap:.5rem;font-size:var(--text-sm);color:#5C534B; }
+.admin-cred__item svg { color:var(--gold);flex-shrink:0; }
+@media(max-width:768px){.admin-badge{right:0;bottom:-12px;}}
+
+.mission-section__grid { gap: var(--space-10); }
+.mission-block h2 { font-size:var(--text-3xl);margin:var(--space-2) 0 var(--space-3); }
+.mission-block p { color:rgba(247,242,233,.75); }
+.mission-quote { text-align:center;border-top:1px solid rgba(247,242,233,.1);padding-top:var(--space-10); }
+.mission-quote blockquote { font-family:var(--font-display);font-size:clamp(var(--text-xl),3vw,var(--text-3xl));font-style:italic;color:var(--ivory);font-weight:300; }
+.mission-quote cite { display:block;margin-top:var(--space-3);font-size:var(--text-sm);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-style:normal; }
+
+.faith-explained__grid { display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin-top:var(--space-8); }
+.faith-explained__item { padding:var(--space-6);background:var(--white);border:1px solid var(--stone);border-radius:4px; }
+.faith-explained__num { font-family:var(--font-display);font-size:3rem;color:var(--stone-mid);font-weight:300;line-height:1;margin-bottom:var(--space-2); }
+.faith-explained__item h3 { font-size:var(--text-xl);margin-bottom:var(--space-2); }
+.faith-explained__item p { font-size:var(--text-base);color:#6B6259; }
+@media(max-width:768px){.faith-explained__grid{grid-template-columns:1fr;}}

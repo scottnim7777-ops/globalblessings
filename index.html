@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Blessings Mission RCFE | Compassionate Senior Care in Los Angeles</title>
+  <meta name="description" content="Faith-based residential care home in Los Angeles providing compassionate, personalized care for seniors. Pastor & Chaplain led with 24-hour support, hospice care, spiritual care, and ALW services." />
+  <meta name="keywords" content="RCFE, senior care, Los Angeles, faith-based, hospice care, ALW, residential care, elderly care" />
+  <meta property="og:title" content="Global Blessings Mission RCFE" />
+  <meta property="og:description" content="Compassionate Senior Care in Los Angeles. Faith-based, Pastor and Chaplain led." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.globalblessings.us" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ====================================================
+       NAVBAR
+  ==================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Global Blessings Mission RCFE">
+          <img src="assets/logo/logo.png" alt="Global Blessings Mission RCFE" />
+        </a>
+
+        <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+          <a href="index.html" class="active"><span class="lang-en">Home</span><span class="lang-kr">홈</span></a>
+          <a href="about.html"><span class="lang-en">About</span><span class="lang-kr">소개</span></a>
+          <a href="services.html"><span class="lang-en">Services</span><span class="lang-kr">서비스</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-kr">갤러리</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-kr">문의</span></a>
+        </nav>
+
+        <div class="navbar__right">
+          <div class="lang-toggle" role="group" aria-label="Language selection">
+            <button data-lang="en" class="active" aria-label="English"><img src="https://flagcdn.com/w40/us.png" alt="US" class="flag-img" /><span class="label">Eng</span></button>
+            <button data-lang="ko" aria-label="한국어"><img src="https://flagcdn.com/w40/kr.png" alt="KR" class="flag-img" /><span class="label">한글</span></button>
+          </div>
+          <a href="contact.html" class="btn btn--primary navbar__cta">
+            <span class="lang-en">Inquire Now</span>
+            <span class="lang-kr">문의하기</span>
+          </a>
+        </div>
+
+        <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <nav>
+      <a href="index.html"><span class="lang-en">Home</span><span class="lang-kr">홈</span></a>
+      <a href="about.html"><span class="lang-en">About</span><span class="lang-kr">소개</span></a>
+      <a href="services.html"><span class="lang-en">Services</span><span class="lang-kr">서비스</span></a>
+      <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-kr">갤러리</span></a>
+      <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-kr">문의</span></a>
+    </nav>
+    <div class="mobile-menu__lang">
+      <div class="lang-toggle">
+        <button data-lang="en" class="active"><img src="https://flagcdn.com/w40/us.png" alt="US" class="flag-img" /><span class="label">Eng</span></button>
+        <button data-lang="ko"><img src="https://flagcdn.com/w40/kr.png" alt="KR" class="flag-img" /><span class="label">한글</span></button>
+      </div>
+    </div>
+    <a href="contact.html" class="btn btn--primary">
+      <span class="lang-en">Inquire Now</span>
+      <span class="lang-kr">문의하기</span>
+    </a>
+  </div>
+
+  <main>
+
+    <!-- ====================================================
+         1. HERO
+    ==================================================== -->
+    <section class="hero" aria-label="Welcome to Global Blessings">
+      <div class="hero__bg">
+        <video
+          autoplay muted loop playsinline
+          poster="assets/video/poster.jpg"
+        >
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <p class="eyebrow lang-en reveal">Los Angeles, California</p>
+          <p class="eyebrow lang-kr reveal">로스앤젤레스, 캘리포니아</p>
+
+          <h1 class="reveal reveal-delay-1">
+            <span class="lang-en">Caring Hearts,<br/>Better Tomorrow.</span>
+            <span class="lang-kr">따뜻한 마음으로,<br/>편안한 내일을 함께합니다.</span>
+          </h1>
+
+          <p class="hero__sub reveal reveal-delay-2">
+            <span class="lang-en">Faith-rooted residential care —<br/>compassionate, personalized, and always present.</span>
+            <span class="lang-kr">신앙 기반의 돌봄으로<br/>어르신의 몸과 마음, 영혼을 함께 지키겠습니다.</span>
+          </p>
+
+          <div class="hero__ctas reveal reveal-delay-3">
+            <a href="contact.html" class="btn btn--primary">
+              <span class="lang-en">Contact Us</span>
+              <span class="lang-kr">문의하기</span>
+            </a>
+            <a href="tel:2133054047" class="btn btn--outline-light">
+              <span class="lang-en">Call Us Now</span>
+              <span class="lang-kr">전화 상담</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         2. TRUST BAR
+    ==================================================== -->
+    <div class="trust-bar" role="complementary" aria-label="Credentials">
+      <div class="container">
+        <div class="trust-bar__inner">
+          <div class="trust-bar__item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span class="lang-en">Licensed RCFE · LIC607812740</span>
+            <span class="lang-kr">공인 시설 · LIC607812740</span>
+          </div>
+          <div class="trust-bar__divider" aria-hidden="true"></div>
+          <div class="trust-bar__item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="lang-en">Pastor & Chaplain Led Care</span>
+            <span class="lang-kr">목사·채플린 운영 시설</span>
+          </div>
+          <div class="trust-bar__divider" aria-hidden="true"></div>
+          <div class="trust-bar__item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="lang-en">24-Hour Personalized Care</span>
+            <span class="lang-kr">24시간 맞춤 돌봄</span>
+          </div>
+          <div class="trust-bar__divider" aria-hidden="true"></div>
+          <div class="trust-bar__item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="lang-en">South Los Angeles, CA</span>
+            <span class="lang-kr">남 로스앤젤레스, CA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================
+         3. WELCOME MESSAGE
+    ==================================================== -->
+    <section class="section welcome" id="welcome">
+      <div class="container">
+        <div class="grid-2 welcome__grid">
+          <div class="welcome__image reveal">
+            <div class="welcome__img-frame">
+              <img
+                src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=700&q=80&auto=format&fit=crop"
+                alt="Administrator Eunice Bodak, Pastor and Chaplain"
+                loading="lazy"
+              />
+              <div class="welcome__badge">
+                <p class="lang-en">Pastor &amp; Chaplain</p>
+                <p class="lang-kr">목사 · 채플린</p>
+                <strong>Eunice Bodak</strong>
+              </div>
+            </div>
+          </div>
+          <div class="welcome__text">
+            <p class="eyebrow reveal">
+              <span class="lang-en">Welcome</span>
+              <span class="lang-kr">환영합니다</span>
+            </p>
+            <h2 class="reveal reveal-delay-1">
+              <span class="lang-en">A Home Built on Faith, Compassion &amp; Dignity.</span>
+              <span class="lang-kr">신앙과 사랑, 존엄 위에 세워진 집.</span>
+            </h2>
+            <div class="welcome__body reveal reveal-delay-2">
+              <p class="lang-en">Welcome to Global Blessings Mission RCFE. We are committed to providing compassionate, personalized care in a safe, comfortable, and family centered environment. Our mission is to support each resident's physical, emotional, and spiritual wellbeing with dignity, respect, and love.</p>
+              <p class="lang-kr">Global Blessings Mission RCFE에 오신 것을 환영합니다. 저희는 안전하고 편안하며 가족 같은 환경 속에서 맞춤형 돌봄을 제공합니다. 존엄과 존중, 사랑을 바탕으로 신체적·정서적·영적 건강을 함께 돌보는 것이 저희의 사명입니다.</p>
+            </div>
+            <div class="welcome__body reveal reveal-delay-3">
+              <p class="lang-en">As a Pastor and Chaplain led care home, we offer not only quality daily care but also spiritual encouragement, prayer, and compassionate support for residents and their families.</p>
+              <p class="lang-kr">목사와 채플린이 운영하는 시설로서 일상적인 돌봄뿐 아니라 영적 격려와 기도, 따뜻한 정서적 지원을 제공합니다.</p>
+            </div>
+            <a href="about.html" class="btn btn--outline reveal reveal-delay-4">
+              <span class="lang-en">Our Story</span>
+              <span class="lang-kr">우리 이야기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         4. CORE VALUES
+    ==================================================== -->
+    <section class="section section--stone values" id="values">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">
+            <span class="lang-en">Our Promise</span>
+            <span class="lang-kr">저희의 약속</span>
+          </span>
+          <h2 class="reveal">
+            <span class="lang-en">Four Pillars of Care</span>
+            <span class="lang-kr">돌봄의 네 기둥</span>
+          </h2>
+          <p class="reveal reveal-delay-1">
+            <span class="lang-en">Every decision we make is grounded in these core values.</span>
+            <span class="lang-kr">저희의 모든 결정은 이 핵심 가치에 뿌리를 두고 있습니다.</span>
+          </p>
+        </div>
+        <div class="grid-4">
+          <div class="value-card reveal">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3><span class="lang-en">Comfortable Living</span><span class="lang-kr">편안한 생활</span></h3>
+            <p><span class="lang-en">A warm, homelike environment where seniors feel truly at home.</span><span class="lang-kr">어르신이 진정한 집처럼 느낄 수 있는 따뜻한 환경.</span></p>
+          </div>
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3><span class="lang-en">Compassionate Care</span><span class="lang-kr">따뜻한 돌봄</span></h3>
+            <p><span class="lang-en">Care delivered with genuine love, empathy, and spiritual purpose.</span><span class="lang-kr">진정한 사랑과 공감, 영적 사명으로 제공하는 돌봄.</span></p>
+          </div>
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3><span class="lang-en">Personalized Support</span><span class="lang-kr">맞춤형 지원</span></h3>
+            <p><span class="lang-en">Every resident receives a care plan tailored to their unique needs.</span><span class="lang-kr">모든 입주자에게 맞춤형 돌봄 계획을 제공합니다.</span></p>
+          </div>
+          <div class="value-card reveal reveal-delay-3">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3><span class="lang-en">Safe &amp; Secure</span><span class="lang-kr">안전한 환경</span></h3>
+            <p><span class="lang-en">A fully supervised, secure environment for peace of mind.</span><span class="lang-kr">완전히 관리되는 안전한 환경으로 마음의 평화를.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         5. WHAT IS RCFE?
+    ==================================================== -->
+    <section class="section rcfe-explainer" id="rcfe">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">
+            <span class="lang-en">Understanding Your Options</span>
+            <span class="lang-kr">어떤 돌봄이 맞는지 알아보세요</span>
+          </span>
+          <h2 class="reveal">
+            <span class="lang-en">What Is an RCFE?</span>
+            <span class="lang-kr">RCFE란 무엇인가요?</span>
+          </h2>
+          <p class="reveal reveal-delay-1">
+            <span class="lang-en">A Residential Care Facility for the Elderly (RCFE) offers a unique middle ground: more personal than a nursing home, more supported than staying alone.</span>
+            <span class="lang-kr">RCFE(노인 거주형 돌봄 시설)는 요양원보다 가정적이고, 혼자 생활하는 것보다 훨씬 안전하고 따뜻한 돌봄을 제공합니다.</span>
+          </p>
+        </div>
+        <div class="rcfe-compare reveal reveal-delay-2">
+          <div class="rcfe-compare__item rcfe-compare__item--active">
+            <div class="rcfe-compare__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <h3><span class="lang-en">RCFE (Us)</span><span class="lang-kr">RCFE (저희)</span></h3>
+            <ul class="rcfe-list">
+              <li><span class="lang-en">Small, homelike setting</span><span class="lang-kr">소규모 가정형 환경</span></li>
+              <li><span class="lang-en">24-hour supervision</span><span class="lang-kr">24시간 감독</span></li>
+              <li><span class="lang-en">Faith &amp; spiritual care</span><span class="lang-kr">신앙·영적 돌봄</span></li>
+              <li><span class="lang-en">Personalized attention</span><span class="lang-kr">개인 맞춤 지원</span></li>
+              <li><span class="lang-en">Homemade meals</span><span class="lang-kr">가정식 식사 제공</span></li>
+              <li><span class="lang-en">Hospice ready</span><span class="lang-kr">호스피스 지원 가능</span></li>
+            </ul>
+          </div>
+          <div class="rcfe-compare__item">
+            <div class="rcfe-compare__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3><span class="lang-en">Nursing Home</span><span class="lang-kr">요양원</span></h3>
+            <ul class="rcfe-list rcfe-list--muted">
+              <li><span class="lang-en">Large institutional facility</span><span class="lang-kr">대형 기관형 시설</span></li>
+              <li><span class="lang-en">Clinical environment</span><span class="lang-kr">임상적 환경</span></li>
+              <li><span class="lang-en">Less individualized care</span><span class="lang-kr">개인 맞춤 부족</span></li>
+              <li><span class="lang-en">Higher cost</span><span class="lang-kr">높은 비용</span></li>
+            </ul>
+          </div>
+          <div class="rcfe-compare__item">
+            <div class="rcfe-compare__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3><span class="lang-en">Living Alone</span><span class="lang-kr">혼자 생활</span></h3>
+            <ul class="rcfe-list rcfe-list--muted">
+              <li><span class="lang-en">No daily supervision</span><span class="lang-kr">일상 감독 없음</span></li>
+              <li><span class="lang-en">Emergency risks</span><span class="lang-kr">응급 위험 노출</span></li>
+              <li><span class="lang-en">Social isolation</span><span class="lang-kr">사회적 고립</span></li>
+              <li><span class="lang-en">No meal support</span><span class="lang-kr">식사 지원 없음</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         6. SERVICES PREVIEW
+    ==================================================== -->
+    <section class="section section--stone services-preview" id="services">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">
+            <span class="lang-en">What We Offer</span>
+            <span class="lang-kr">제공 서비스</span>
+          </span>
+          <h2 class="reveal">
+            <span class="lang-en">Comprehensive Senior Care</span>
+            <span class="lang-kr">종합 시니어 돌봄</span>
+          </h2>
+          <p class="reveal reveal-delay-1">
+            <span class="lang-en">Every service is delivered with the same commitment: treating every resident as family.</span>
+            <span class="lang-kr">모든 서비스는 한 가지 마음으로, 모든 입주자를 가족처럼.</span>
+          </p>
+        </div>
+        <div class="grid-3 services-preview__grid">
+          <div class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3><span class="lang-en">24-Hour Personalized Care</span><span class="lang-kr">24시간 맞춤 돌봄</span></h3>
+            <p><span class="lang-en">Around the clock supervision and assistance with daily living activities.</span><span class="lang-kr">24시간 감독과 일상생활 보조 서비스.</span></p>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3><span class="lang-en">Hospice Care Support</span><span class="lang-kr">호스피스 케어 지원</span></h3>
+            <p><span class="lang-en">Compassionate end of life support for residents and their families.</span><span class="lang-kr">입주자와 가족을 위한 따뜻한 임종 지원 서비스.</span></p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 22h15"/><path d="M12 2v20"/><path d="m4.5 15 7.5-7.5L19.5 15"/></svg>
+            </div>
+            <h3><span class="lang-en">ALW Services</span><span class="lang-kr">ALW 서비스</span></h3>
+            <p><span class="lang-en">Assisted Living Waiver program support for eligible residents.</span><span class="lang-kr">자격 대상 입주자를 위한 ALW 프로그램 지원.</span></p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <h3><span class="lang-en">Spiritual Care &amp; Prayer</span><span class="lang-kr">영적 돌봄 및 기도</span></h3>
+            <p><span class="lang-en">Faith centered support, prayer, and spiritual encouragement daily.</span><span class="lang-kr">매일의 기도와 영적 격려, 신앙 중심의 돌봄.</span></p>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14 4 9l5-5"/><path d="m15 14 5-5-5-5"/></svg>
+            </div>
+            <h3><span class="lang-en">Medication Assistance</span><span class="lang-kr">투약 관리</span></h3>
+            <p><span class="lang-en">Safe and timely medication management and administration support.</span><span class="lang-kr">안전하고 정확한 투약 관리 지원.</span></p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3><span class="lang-en">Professional Counseling</span><span class="lang-kr">전문 상담 서비스</span></h3>
+            <p><span class="lang-en">Health counseling and wellness planning by qualified professionals.</span><span class="lang-kr">전문가가 제공하는 건강 상담 및 웰니스 플랜.</span></p>
+          </div>
+        </div>
+        <div class="text-center" style="margin-top: var(--space-10);">
+          <a href="services.html" class="btn btn--outline">
+            <span class="lang-en">View All Services</span>
+            <span class="lang-kr">전체 서비스 보기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         7. FAITH + CARE IDENTITY
+    ==================================================== -->
+    <section class="section section--dark faith-section" id="faith">
+      <div class="container">
+        <div class="grid-2 faith-section__grid">
+          <div class="faith-section__text">
+            <p class="eyebrow reveal">
+              <span class="lang-en">Our Difference</span>
+              <span class="lang-kr">저희만의 차별점</span>
+            </p>
+            <h2 class="reveal reveal-delay-1">
+              <span class="lang-en">Care for Body, Mind &amp; Spirit.</span>
+              <span class="lang-kr">몸과 마음, 영혼을 함께 돌봅니다.</span>
+            </h2>
+            <p class="reveal reveal-delay-2">
+              <span class="lang-en">Global Blessings Mission RCFE is more than a care home. Led by an ordained Pastor and Chaplain, we believe that true healing encompasses physical comfort, emotional wellbeing, and spiritual peace.</span>
+              <span class="lang-kr">Global Blessings Mission RCFE는 단순한 요양 시설이 아닙니다. 목사이자 채플린이 운영하는 이곳에서 저희는 진정한 치유가 신체적 안락, 정서적 건강, 영적 평화를 모두 아우른다고 믿습니다.</span>
+            </p>
+            <div class="faith-pillars reveal reveal-delay-3">
+              <div class="faith-pillars__item">
+                <span class="faith-pillars__label lang-en">Body</span>
+                <span class="faith-pillars__label lang-kr">신체</span>
+                <p class="lang-en">24-hour professional care & medical support</p>
+                <p class="lang-kr">24시간 전문 돌봄 및 의료 지원</p>
+              </div>
+              <div class="faith-pillars__item">
+                <span class="faith-pillars__label lang-en">Mind</span>
+                <span class="faith-pillars__label lang-kr">정서</span>
+                <p class="lang-en">Counseling, social engagement & family connection</p>
+                <p class="lang-kr">상담, 사회 활동, 가족과의 연결</p>
+              </div>
+              <div class="faith-pillars__item">
+                <span class="faith-pillars__label lang-en">Spirit</span>
+                <span class="faith-pillars__label lang-kr">영혼</span>
+                <p class="lang-en">Prayer, pastoral care & spiritual encouragement</p>
+                <p class="lang-kr">기도, 목회 돌봄, 영적 격려</p>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn--outline-light reveal reveal-delay-4">
+              <span class="lang-en">Learn More About Us</span>
+              <span class="lang-kr">더 알아보기</span>
+            </a>
+          </div>
+          <div class="faith-section__image reveal">
+            <img
+              src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=700&q=80&auto=format&fit=crop"
+              alt="Caregiver gently holding hands with an elderly resident"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         8. GALLERY PREVIEW
+    ==================================================== -->
+    <section class="section gallery-preview" id="gallery">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">
+            <span class="lang-en">Our Community</span>
+            <span class="lang-kr">우리 커뮤니티</span>
+          </span>
+          <h2 class="reveal">
+            <span class="lang-en">A Glimpse of Home</span>
+            <span class="lang-kr">따뜻한 일상의 풍경</span>
+          </h2>
+        </div>
+        <div class="gallery-preview__grid reveal">
+          <a href="gallery.html" class="gallery-preview__item gallery-preview__item--large">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80&auto=format&fit=crop&crop=top" alt="Caregiver and senior resident sharing a warm moment" loading="lazy" />
+            <div class="gallery-preview__overlay"></div>
+          </a>
+          <div class="gallery-preview__col">
+            <a href="gallery.html" class="gallery-preview__item">
+              <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&q=80&auto=format&fit=crop" alt="Warm sunlit dining space" loading="lazy" />
+              <div class="gallery-preview__overlay"></div>
+            </a>
+            <a href="gallery.html" class="gallery-preview__item">
+              <img src="https://images.unsplash.com/photo-1516728778615-2d590ea1855e?w=400&q=80&auto=format&fit=crop" alt="Peaceful garden" loading="lazy" />
+              <div class="gallery-preview__overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-preview__col">
+            <a href="gallery.html" class="gallery-preview__item">
+              <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=400&q=80&auto=format&fit=crop" alt="Caregiver with elderly resident" loading="lazy" />
+              <div class="gallery-preview__overlay"></div>
+            </a>
+            <a href="gallery.html" class="gallery-preview__item">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80&auto=format&fit=crop" alt="Community gathering" loading="lazy" />
+              <div class="gallery-preview__overlay"></div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center" style="margin-top: var(--space-8);">
+          <a href="gallery.html" class="btn btn--outline">
+            <span class="lang-en">See Full Gallery</span>
+            <span class="lang-kr">전체 갤러리 보기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         9. SUPPORT / DONATE
+    ==================================================== -->
+    <section class="donate-section" id="donate" aria-labelledby="donate-heading">
+      <div class="donate-section__bg">
+        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&q=80&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+      <div class="donate-section__overlay"></div>
+      <div class="container donate-section__content">
+        <p class="eyebrow reveal">
+          <span class="lang-en">Make a Difference</span>
+          <span class="lang-kr">변화를 만들어 주세요</span>
+        </p>
+        <h2 id="donate-heading" class="reveal reveal-delay-1">
+          <span class="lang-en">Support Our Cause</span>
+          <span class="lang-kr">저희를 후원해 주세요</span>
+        </h2>
+        <p class="reveal reveal-delay-2">
+          <span class="lang-en">Empower communities and transform lives through your generous donation to Global Blessings. Join us in creating a brighter future for all.</span>
+          <span class="lang-kr">Global Blessings에 대한 후원으로 커뮤니티를 세우고 삶을 변화시켜 주세요. 모두를 위한 더 밝은 미래를 함께 만들어 갑시다.</span>
+        </p>
+        <a href="contact.html#donate" class="btn btn--primary reveal reveal-delay-3">
+          <span class="lang-en">Contribute Today</span>
+          <span class="lang-kr">지금 기부하기</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         10. NEWSLETTER
+    ==================================================== -->
+    <section class="section newsletter" id="newsletter">
+      <div class="container">
+        <div class="newsletter__inner">
+          <div class="newsletter__text reveal">
+            <p class="eyebrow">
+              <span class="lang-en">Stay Connected</span>
+              <span class="lang-kr">함께하세요</span>
+            </p>
+            <h2>
+              <span class="lang-en">Stay in Touch</span>
+              <span class="lang-kr">소식 받아보기</span>
+            </h2>
+            <p>
+              <span class="lang-en">Learn about upcoming events, community news, and ways to get involved.</span>
+              <span class="lang-kr">다가오는 이벤트, 커뮤니티 소식, 참여 방법을 가장 먼저 알아보세요.</span>
+            </p>
+          </div>
+          <form class="newsletter-form reveal reveal-delay-2" novalidate aria-label="Newsletter signup">
+            <div class="newsletter-form__group">
+              <label for="nl-email" class="sr-only">
+                <span class="lang-en">Email address</span>
+                <span class="lang-kr">이메일 주소</span>
+              </label>
+              <input
+                type="email"
+                id="nl-email"
+                name="email"
+                autocomplete="email"
+                placeholder="your@email.com"
+                required
+                aria-required="true"
+              />
+              <button type="submit" class="btn btn--primary">
+                <span class="lang-en">Subscribe</span>
+                <span class="lang-kr">구독하기</span>
+              </button>
+            </div>
+            <p class="newsletter-form__note">
+              <span class="lang-en">No spam, ever. Unsubscribe any time.</span>
+              <span class="lang-kr">스팸 없음. 언제든 구독 취소 가능.</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       FOOTER
+  ==================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo" style="margin-bottom: var(--space-3); display: inline-flex;">
+            <img src="assets/logo/logo.png" alt="Global Blessings Mission RCFE" style="height:130px;width:auto;object-fit:contain;" />
+          </a>
+          <p class="lang-en">"Providing compassionate care for body, mind, and spirit."<br/>Los Angeles, CA</p>
+          <p class="lang-kr">"몸과 마음, 영혼을 위한 따뜻한 돌봄."<br/>로스앤젤레스, CA</p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Yelp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.93a8.17 8.17 0 004.77 1.52V7a4.85 4.85 0 01-1-.31z"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/></svg></a>
+            <a href="#" aria-label="X / Twitter"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="lang-en">Navigation</h4>
+          <h4 class="lang-kr">메뉴</h4>
+          <ul>
+            <li><a href="index.html"><span class="lang-en">Home</span><span class="lang-kr">홈</span></a></li>
+            <li><a href="about.html"><span class="lang-en">About Us</span><span class="lang-kr">소개</span></a></li>
+            <li><a href="services.html"><span class="lang-en">Services</span><span class="lang-kr">서비스</span></a></li>
+            <li><a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-kr">갤러리</span></a></li>
+            <li><a href="contact.html"><span class="lang-en">Contact</span><span class="lang-kr">문의</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="lang-en">Services</h4>
+          <h4 class="lang-kr">서비스</h4>
+          <ul>
+            <li><a href="services.html"><span class="lang-en">24-Hour Care</span><span class="lang-kr">24시간 돌봄</span></a></li>
+            <li><a href="services.html"><span class="lang-en">Hospice Support</span><span class="lang-kr">호스피스 지원</span></a></li>
+            <li><a href="services.html"><span class="lang-en">ALW Program</span><span class="lang-kr">ALW 프로그램</span></a></li>
+            <li><a href="services.html"><span class="lang-en">Spiritual Care</span><span class="lang-kr">영적 돌봄</span></a></li>
+            <li><a href="services.html"><span class="lang-en">Counseling</span><span class="lang-kr">상담 서비스</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__contact">
+          <h4 class="lang-en">Contact</h4>
+          <h4 class="lang-kr">연락처</h4>
+          <p>South Los Angeles, CA</p>
+          <p style="margin-top: var(--space-2);">
+            <a href="tel:2133054047">213-305-4047</a><br/>
+            <a href="tel:3107807697">310-780-7697</a>
+          </p>
+          <p style="margin-top: var(--space-2);">
+            <a href="mailto:globalbm130@gmail.com">globalbm130@gmail.com</a>
+          </p>
+          <p style="margin-top: var(--space-2); font-size: var(--text-xs); opacity: 0.6;">
+            <span class="lang-en">Daily 9:00 AM – 9:00 PM</span>
+            <span class="lang-kr">매일 오전 9시 – 오후 9시</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="lang-en">© 2026 Global Blessings Mission RCFE. All Rights Reserved.</p>
+        <p class="lang-kr">© 2026 Global Blessings Mission RCFE. 모든 권리 보유.</p>
+        <div class="footer__bottom-links">
+          <a href="#"><span class="lang-en">Privacy Policy</span><span class="lang-kr">개인정보처리방침</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-kr">문의</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky call bar -->
+  <div class="mobile-call-bar" aria-label="Quick contact">
+    <a href="tel:2133054047">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="lang-en">Call Now</span>
+      <span class="lang-kr">전화 상담</span>
+    </a>
+    <a href="contact.html">
+      <span class="lang-en">Inquire Now</span>
+      <span class="lang-kr">문의하기</span>
+    </a>
+  </div>
+
+  <!-- Screen reader only utility -->
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+</body>
+</html>
