@@ -56,14 +56,48 @@ a.quick-contact__item:hover { background: rgba(247,242,233,.06); }
 .form-group textarea:invalid:not(:placeholder-shown) { border-color: #C0392B; }
 .form-group textarea { min-height: 140px; resize: vertical; }
 .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B6259' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
-.form-submit { align-self: flex-start; }
-.form-success {
-  display: none; align-items: center; gap: .5rem;
-  padding: var(--space-3) var(--space-4);
-  background: rgba(94,126,94,.1); border: 1px solid var(--sage);
-  border-radius: 2px; color: var(--sage); font-size: var(--text-sm);
+.form-submit { align-self: flex-start; min-width: 160px; }
+.form-submit[hidden] { display: none; }
+
+/* field labels: req / optional */
+.form-group label .req { color: #C0392B; font-weight: 600; }
+.form-group label .optional { font-size: 0.8em; font-weight: 400; color: #999; }
+
+/* note below fields */
+.form-note { font-size: 0.78rem; color: #999; margin-top: -.5rem; }
+
+/* validation error state */
+.form-group input.input-error,
+.form-group textarea.input-error {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192,57,43,.1);
 }
-.form-success.visible { display: flex; }
+
+/* success / error banners */
+.form-success,
+.form-error {
+  display: flex; align-items: flex-start; gap: .75rem;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 2px; font-size: var(--text-sm);
+}
+.form-success[hidden],
+.form-error[hidden] { display: none; }
+
+.form-success {
+  background: rgba(94,126,94,.1); border: 1px solid var(--sage); color: var(--sage);
+}
+.form-success svg { color: var(--sage); flex-shrink: 0; margin-top: 2px; }
+.form-success strong { display: block; margin-bottom: 2px; }
+.form-success p { margin: 0; opacity: .85; }
+
+.form-error {
+  background: rgba(192,57,43,.07); border: 1px solid rgba(192,57,43,.4); color: #C0392B;
+}
+.form-error svg { flex-shrink: 0; margin-top: 2px; }
+.form-error strong { display: block; margin-bottom: 2px; }
+.form-error p { margin: 0; opacity: .85; }
+.form-error a { color: #C0392B; text-decoration: underline; }
+
 @media(max-width:600px){ .form-row{ grid-template-columns:1fr; } .form-submit{ align-self: stretch; } }
 
 /* Map */

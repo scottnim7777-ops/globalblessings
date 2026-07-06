@@ -134,66 +134,97 @@
             </p>
 
             <form class="contact-form reveal reveal-delay-3" id="contact-form" novalidate>
+
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="cf-name">
-                    <span class="lang-en">Full Name *</span>
-                    <span class="lang-kr">이름 *</span>
+                    <span class="lang-en">Full Name <span class="req">*</span></span>
+                    <span class="lang-kr">이름 <span class="req">*</span></span>
                   </label>
-                  <input type="text" id="cf-name" name="name" autocomplete="name" required aria-required="true"
-                    placeholder="John Smith" />
+                  <input type="text" id="cf-name" name="이름" autocomplete="name" required aria-required="true"
+                    placeholder="홍길동 / John Smith" />
                 </div>
                 <div class="form-group">
                   <label for="cf-phone">
-                    <span class="lang-en">Phone Number</span>
-                    <span class="lang-kr">전화번호</span>
+                    <span class="lang-en">Phone Number <span class="req">*</span></span>
+                    <span class="lang-kr">핸드폰 번호 <span class="req">*</span></span>
                   </label>
-                  <input type="tel" id="cf-phone" name="phone" autocomplete="tel"
-                    placeholder="(213) 000-0000" />
+                  <input type="tel" id="cf-phone" name="핸드폰번호" autocomplete="tel" required aria-required="true"
+                    placeholder="010-0000-0000 / (213) 000-0000" />
                 </div>
               </div>
+
               <div class="form-group">
                 <label for="cf-email">
-                  <span class="lang-en">Email Address *</span>
-                  <span class="lang-kr">이메일 주소 *</span>
+                  <span class="lang-en">Email <span class="optional">(optional)</span></span>
+                  <span class="lang-kr">이메일 <span class="optional">(선택사항)</span></span>
                 </label>
-                <input type="email" id="cf-email" name="email" autocomplete="email" required aria-required="true"
-                  placeholder="your@email.com" />
+                <input type="email" id="cf-email" name="email" autocomplete="email"
+                  placeholder="example@email.com" />
               </div>
+
               <div class="form-group">
                 <label for="cf-hear">
                   <span class="lang-en">How did you hear about us?</span>
                   <span class="lang-kr">어떻게 알게 되셨나요?</span>
                 </label>
-                <select id="cf-hear" name="source">
+                <select id="cf-hear" name="유입경로">
                   <option value="" disabled selected>
-                    <span class="lang-en">Select one</span>
+                    —
                   </option>
-                  <option value="google" class="lang-en">Google Search</option>
-                  <option value="referral" class="lang-en">Friend / Family Referral</option>
-                  <option value="hospital" class="lang-en">Hospital / Doctor</option>
-                  <option value="church" class="lang-en">Church / Community</option>
-                  <option value="social" class="lang-en">Social Media</option>
-                  <option value="other" class="lang-en">Other</option>
+                  <option value="구글 검색">구글 검색 / Google Search</option>
+                  <option value="지인 소개">지인 소개 / Friend &amp; Family</option>
+                  <option value="병원·의사 소개">병원 / 의사 소개</option>
+                  <option value="교회·커뮤니티">교회 / 커뮤니티</option>
+                  <option value="소셜 미디어">소셜 미디어</option>
+                  <option value="기타">기타 / Other</option>
                 </select>
               </div>
+
               <div class="form-group">
                 <label for="cf-message">
-                  <span class="lang-en">Message *</span>
-                  <span class="lang-kr">메시지 *</span>
+                  <span class="lang-en">Message <span class="req">*</span></span>
+                  <span class="lang-kr">문의 내용 <span class="req">*</span></span>
                 </label>
-                <textarea id="cf-message" name="message" rows="5" required aria-required="true"
-                  placeholder="Tell us about your loved one and how we can help..."></textarea>
+                <textarea id="cf-message" name="문의내용" rows="6" required aria-required="true"
+                  placeholder="어르신에 대해 알려주시거나, 궁금하신 점을 자유롭게 적어 주세요.&#10;Feel free to share about your loved one or ask any questions."></textarea>
               </div>
+
+              <p class="form-note lang-en">Fields marked <span class="req">*</span> are required. We respond within 1 business day.</p>
+              <p class="form-note lang-kr"><span class="req">*</span> 표시 항목은 필수입니다. 영업일 기준 1일 이내 답변드립니다.</p>
+
               <button type="submit" class="btn btn--primary form-submit">
-                <span class="lang-en">Send Message</span>
-                <span class="lang-kr">메시지 보내기</span>
+                <span class="submit-label">
+                  <span class="lang-en">Send Message</span>
+                  <span class="lang-kr">보내기</span>
+                </span>
+                <span class="submit-loading" hidden>
+                  <span class="lang-en">Sending…</span>
+                  <span class="lang-kr">전송 중…</span>
+                </span>
               </button>
-              <div class="form-success" id="form-success" role="alert" aria-live="polite">
+
+              <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <span class="lang-en">Thank you! We'll be in touch shortly.</span>
-                <span class="lang-kr">감사합니다! 곧 연락드리겠습니다.</span>
+                <div>
+                  <strong class="lang-en">Message sent!</strong>
+                  <strong class="lang-kr">문의가 접수되었습니다!</strong>
+                  <p class="lang-en">We'll get back to you within 1 business day.</p>
+                  <p class="lang-kr">영업일 기준 1일 이내 연락드리겠습니다.</p>
+                </div>
               </div>
+
+              <div class="form-error" id="form-error" role="alert" aria-live="polite" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div>
+                  <strong class="lang-en">Something went wrong.</strong>
+                  <strong class="lang-kr">전송에 실패했습니다.</strong>
+                  <p class="lang-en">Please call us directly at <a href="tel:2133054047">213-305-4047</a>.</p>
+                  <p class="lang-kr">직접 전화 주세요. <a href="tel:2133054047">213-305-4047</a></p>
+                </div>
+              </div>
+
             </form>
           </div>
 
