@@ -1,9 +1,14 @@
-/* Contact form — mail.php submission */
+/* Contact form — Netlify Forms submission */
 document.addEventListener('DOMContentLoaded', () => {
   const form      = document.getElementById('contact-form');
   const successEl = document.getElementById('form-success');
   const errorEl   = document.getElementById('form-error');
   if (!form) return;
+
+  const encode = (data) =>
+    Object.keys(data)
+      .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k] ?? ''))
+      .join('&');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -33,31 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
     successEl.hidden = true;
     errorEl.hidden   = true;
 
-    /* --- payload --- */
-    const payload = {
-      '이름':      nameEl.value.trim(),
-      '핸드폰번호': phoneEl.value.trim(),
-      '이메일':    form.querySelector('#cf-email').value.trim(),
-      '유입경로':  form.querySelector('#cf-hear').value,
-      '문의내용':  messageEl.value.trim(),
-    };
-
     try {
-      const res  = await fetch('mail.php', {
+      await fetch('/', {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          '이름':       nameEl.value.trim(),
+          '핸드폰번호':  phoneEl.value.trim(),
+          'email':      form.querySelector('#cf-email').value.trim(),
+          '유입경로':   form.querySelector('#cf-hear').value,
+          '문의내용':   messageEl.value.trim(),
+        }),
       });
-      const data = await res.json();
 
-      if (data.success) {
-        form.reset();
-        successEl.hidden = false;
-        successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        btn.hidden = true;
-      } else {
-        throw new Error('failed');
-      }
+      form.reset();
+      successEl.hidden = false;
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      btn.hidden = true;
     } catch {
       errorEl.hidden   = false;
       btn.disabled     = false;

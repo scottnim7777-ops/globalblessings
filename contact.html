@@ -133,8 +133,11 @@
               <span class="lang-kr">최적의 돌봄을 위해 먼저 간단한 상담을 통해 입주 가능 여부를 확인합니다. 양식을 작성해 주시면 담당자가 안내 드리겠습니다.</span>
             </p>
 
-            <form class="contact-form reveal reveal-delay-3" id="contact-form" novalidate>
+            <form class="contact-form reveal reveal-delay-3" id="contact-form"
+                  name="contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden" style="display:none"><input name="bot-field" /></p>
 
               <div class="form-row">
                 <div class="form-group">
