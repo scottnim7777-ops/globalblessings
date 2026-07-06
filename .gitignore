@@ -6,3 +6,6 @@ Thumbs.db
 assets/video/raw*.mp4
 assets/video/yt-dlp.exe
 assets/video/*.tmp
+
+# Local Netlify folder
+.netlify
