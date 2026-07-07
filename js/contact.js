@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* sync dual selects (EN/KR) */
+  const hearEn = form.querySelector('#cf-hear');
+  const hearKr = form.querySelector('#cf-hear-kr');
+  if (hearEn && hearKr) {
+    hearEn.addEventListener('change', () => { hearKr.value = hearEn.value; });
+    hearKr.addEventListener('change', () => { hearEn.value = hearKr.value; });
+  }
+
   /* clear error state on input */
   form.querySelectorAll('input, textarea').forEach(el => {
     el.addEventListener('input', () => el.classList.remove('input-error'));

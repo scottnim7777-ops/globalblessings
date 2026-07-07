@@ -172,16 +172,23 @@
                   <span class="lang-en">How did you hear about us?</span>
                   <span class="lang-kr">어떻게 알게 되셨나요?</span>
                 </label>
-                <select id="cf-hear" name="유입경로">
-                  <option value="" disabled selected>
-                    —
-                  </option>
-                  <option value="구글 검색">구글 검색 / Google Search</option>
-                  <option value="지인 소개">지인 소개 / Friend &amp; Family</option>
+                <select id="cf-hear" name="유입경로" class="lang-en">
+                  <option value="" disabled selected>Please select</option>
+                  <option value="구글 검색">Google Search</option>
+                  <option value="지인 소개">Friend or Family</option>
+                  <option value="병원·의사 소개">Hospital or Doctor</option>
+                  <option value="교회·커뮤니티">Church or Community</option>
+                  <option value="소셜 미디어">Social Media</option>
+                  <option value="기타">Other</option>
+                </select>
+                <select id="cf-hear-kr" name="유입경로" class="lang-kr" aria-hidden="true">
+                  <option value="" disabled selected>선택해 주세요</option>
+                  <option value="구글 검색">구글 검색</option>
+                  <option value="지인 소개">지인 소개</option>
                   <option value="병원·의사 소개">병원 / 의사 소개</option>
                   <option value="교회·커뮤니티">교회 / 커뮤니티</option>
                   <option value="소셜 미디어">소셜 미디어</option>
-                  <option value="기타">기타 / Other</option>
+                  <option value="기타">기타</option>
                 </select>
               </div>
 
