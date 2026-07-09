@@ -1,26 +1,4 @@
 /* Services Page */
-.services-detail-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);
-  margin-top: var(--space-8);
-}
-.services-detail__item {
-  display: flex; gap: var(--space-4);
-  padding: var(--space-6); background: var(--white);
-  border: 1px solid var(--stone); border-radius: 4px;
-  transition: box-shadow var(--duration-base), transform var(--duration-base), border-color var(--duration-base);
-}
-.services-detail__item:hover {
-  box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--gold);
-}
-.services-detail__icon {
-  flex-shrink: 0; width: 52px; height: 52px;
-  display: flex; align-items: center; justify-content: center;
-  border: 1.5px solid var(--gold); border-radius: 50%; color: var(--gold);
-}
-.services-detail__item h3 { font-size: var(--text-lg); margin-bottom: var(--space-1); }
-.services-detail__item p { font-size: var(--text-sm); color: #6B6259; line-height: 1.7; }
-@media(max-width:768px){ .services-detail-grid{ grid-template-columns:1fr; } }
-
 .pricing-grid {
   display: grid; grid-template-columns: repeat(3,1fr);
   gap: var(--space-6); margin-top: var(--space-10);
@@ -49,3 +27,22 @@
 .pricing-card p { font-size: var(--text-sm); color: #6B6259; line-height: 1.7; flex: 1; }
 .pricing-card .btn { margin-top: auto; }
 @media(max-width:900px){ .pricing-grid{ grid-template-columns:1fr; max-width:480px; margin-inline:auto; } }
+
+/* Activities banner */
+.activities-banner__img {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(43,38,34,0.12);
+}
+.activities-banner__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* PC버전 보이고 모바일버전 숨김 (기본) */
+.activities-banner__img--mobile { display: none; }
+/* 모바일에서 반전 */
+@media(max-width:768px){
+  .activities-banner__img--pc { display: none; }
+  .activities-banner__img--mobile { display: block; border-radius: 10px; }
+}

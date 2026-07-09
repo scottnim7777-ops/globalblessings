@@ -42,8 +42,14 @@
 }
 .gallery-item.hidden { display: none; }
 
-@media(max-width:768px){ .gallery-grid{ grid-template-columns:repeat(2,1fr); } }
-@media(max-width:480px){ .gallery-grid{ grid-template-columns:1fr; } }
+@media(max-width:768px){
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); }
+  .gallery-item { aspect-ratio: 4/3; }
+}
+@media(max-width:480px){
+  .gallery-grid{ grid-template-columns:1fr; }
+  .gallery-item { aspect-ratio: 3/2; }
+}
 
 /* Lightbox */
 .lightbox {

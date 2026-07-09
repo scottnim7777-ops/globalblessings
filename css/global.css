@@ -3,10 +3,7 @@
    "Quiet Luxury, Built for Rest"
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap');
-
-/* Pretendard via CDN */
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap');
 
 /* ============================================================
    1. CSS Variables
@@ -26,10 +23,11 @@
   --overlay:      rgba(43, 38, 34, 0.55);
 
   /* Typography */
-  --font-display-en: 'Fraunces', Georgia, serif;
-  --font-body-en:    'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-display-kr: 'Noto Serif KR', 'Malgun Gothic', serif;
-  --font-body-kr:    'Pretendard Variable', 'Apple SD Gothic Neo', sans-serif;
+  --font-accent:     'Cormorant Garamond', 'Times New Roman', serif;
+  --font-display-en: 'Montserrat', system-ui, sans-serif;
+  --font-body-en:    'Lato', system-ui, sans-serif;
+  --font-display-kr: 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+  --font-body-kr:    'Noto Serif KR', 'Apple SD Gothic Neo', serif;
 
   /* Active fonts (switched by lang toggle) */
   --font-display: var(--font-display-en);
@@ -67,8 +65,10 @@
   --container-narrow: 800px;
 
   /* Transitions */
-  --ease-out:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-in-out:  cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-out:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out:    cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-emphasis:  cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 0.25s;
   --duration-base: 0.45s;
   --duration-slow: 0.7s;
@@ -84,6 +84,32 @@ html[lang="ko"] {
   --font-display: var(--font-display-kr);
   --font-body:    var(--font-body-kr);
 }
+html[lang="ko"] body {
+  letter-spacing: 0;
+  word-break: keep-all;
+  line-height: 1.9;
+}
+html[lang="ko"] h1,
+html[lang="ko"] h2,
+html[lang="ko"] h3,
+html[lang="ko"] h4 {
+  word-break: keep-all;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+html[lang="ko"] p {
+  word-break: keep-all;
+  line-height: 1.9;
+}
+html[lang="ko"] .eyebrow {
+  letter-spacing: 0.06em;
+  font-size: var(--text-sm);
+}
+html[lang="ko"] .btn {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
 
 /* ============================================================
    2. Reset & Base
@@ -94,16 +120,31 @@ html {
   scroll-behavior: smooth;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-body);
   font-size: var(--text-lg);
-  line-height: 1.75;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
   color: var(--walnut);
   background-color: var(--ivory);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
 }
 
 img, video { max-width: 100%; display: block; }
@@ -124,7 +165,7 @@ ul, ol { list-style: none; }
    ============================================================ */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--walnut);
 }
@@ -144,9 +185,32 @@ p { font-size: var(--text-lg); line-height: 1.75; }
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
+}
+/* Left-aligned eyebrow decorative line */
+.section-header:not(.center) .eyebrow,
+.faith-section__text .eyebrow,
+.contact-form-wrap .eyebrow,
+.welcome__text .eyebrow,
+.about-story__text .eyebrow,
+.admin-section__text .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-header:not(.center) .eyebrow::before,
+.faith-section__text .eyebrow::before,
+.contact-form-wrap .eyebrow::before,
+.welcome__text .eyebrow::before,
+.about-story__text .eyebrow::before,
+.admin-section__text .eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background-color: var(--gold);
+  flex-shrink: 0;
 }
 
 /* ============================================================
@@ -166,6 +230,7 @@ p { font-size: var(--text-lg); line-height: 1.75; }
 
 .section {
   padding-block: var(--section-py);
+  position: relative;
 }
 
 .section--dark {
@@ -207,13 +272,24 @@ p { font-size: var(--text-lg); line-height: 1.75; }
 }
 
 .btn--primary {
-  background-color: var(--gold);
+  background: linear-gradient(135deg, #C49340 0%, #B8893B 55%, #A0782E 100%);
   color: var(--white);
+  position: relative;
+  overflow: hidden;
 }
+.btn--primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.22) 50%, transparent 70%);
+  transform: translateX(-120%) skewX(-20deg);
+  transition: transform 0.55s ease;
+}
+.btn--primary:hover::before { transform: translateX(220%) skewX(-20deg); }
 .btn--primary:hover {
-  background-color: var(--gold-light);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, #D0A045 0%, #C49340 55%, #B0882E 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(184,137,59,0.38);
 }
 
 .btn--outline {
@@ -306,11 +382,10 @@ a:focus-visible {
 .reveal-delay-4 { transition-delay: 0.4s; }
 
 /* ============================================================
-   9. Language Toggle
+   9. Language Toggle — !important prevents any layout class from overriding hide
    ============================================================ */
-.lang-kr { display: none; }
-html[lang="ko"] .lang-en { display: none; }
-html[lang="ko"] .lang-kr { display: revert; }
+html:not([lang="ko"]) .lang-kr { display: none !important; }
+html[lang="ko"] .lang-en { display: none !important; }
 
 /* ============================================================
    10. Mobile Sticky Call Bar
@@ -322,30 +397,38 @@ html[lang="ko"] .lang-kr { display: revert; }
   left: 0;
   right: 0;
   z-index: 500;
-  background-color: var(--forest);
-  padding: var(--space-2) var(--space-4);
-  gap: var(--space-2);
+  background: linear-gradient(180deg, #1d2e1f 0%, #162217 100%);
+  border-top: 1px solid rgba(196, 147, 64, 0.38);
+  padding: 12px 14px calc(18px + env(safe-area-inset-bottom, 0px));
+  gap: 10px;
+  transform: translateY(100%);
+  transition: transform 0.44s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-call-bar--visible {
+  transform: translateY(0);
 }
 .mobile-call-bar a {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  font-size: var(--text-base);
-  font-weight: 500;
-  border-radius: 2px;
+  gap: 0.45rem;
+  padding: 0.8rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
   min-height: 52px;
 }
 .mobile-call-bar a:first-child {
-  background-color: var(--gold);
-  color: var(--white);
+  background: linear-gradient(135deg, #D4A044 0%, #C49340 55%, #A57230 100%);
+  color: #fff;
+  box-shadow: 0 2px 14px rgba(196, 147, 64, 0.28);
 }
 .mobile-call-bar a:last-child {
-  background-color: transparent;
-  color: var(--ivory);
-  border: 1.5px solid rgba(247,242,233,0.4);
+  background-color: rgba(247, 242, 233, 0.07);
+  color: rgba(232, 224, 213, 0.88);
+  border: 1.5px solid rgba(232, 224, 213, 0.22);
 }
 
 /* ============================================================
@@ -372,4 +455,57 @@ html[lang="ko"] .lang-kr { display: revert; }
   .container { padding-inline: var(--space-3); }
   .mobile-call-bar { display: flex; }
   body { padding-bottom: 76px; }
+}
+
+/* ============================================================
+   WAVE SECTION DIVIDERS
+   ============================================================ */
+.wave-divider {
+  display: block;
+  line-height: 0;
+  position: relative;
+  z-index: 2;
+  margin: -2px 0;
+  overflow: hidden;
+}
+.wave-divider svg {
+  display: block;
+  width: 200%;
+  height: 140px;
+  animation: waveFlow 20s linear infinite;
+}
+@keyframes waveFlow {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave-divider svg { animation: none; width: 100%; }
+}
+@media (max-width: 768px) {
+  .wave-divider svg { height: 85px; }
+}
+@media (max-width: 480px) {
+  .wave-divider svg { height: 60px; }
+}
+
+/* ============================================================
+   Luxury Image Reveal
+   ============================================================ */
+main img {
+  opacity: 0;
+  filter: blur(8px) saturate(0.75);
+  transform: scale(1.025);
+  transition:
+    opacity 0.85s var(--ease-editorial),
+    filter 1.1s var(--ease-editorial),
+    transform 1.1s var(--ease-editorial);
+  will-change: opacity, filter, transform;
+}
+main img.img-loaded {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  main img { opacity: 1; filter: none; transform: none; transition: none; }
 }
