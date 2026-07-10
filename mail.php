@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST')    { echo json_encode(['success'=>fal
 $data = json_decode(file_get_contents('php://input'), true);
 if (!$data) { echo json_encode(['success'=>false,'error'=>'no data']); exit; }
 
-$to      = 'eunicekim7679@gmail.com';
+$to      = 'gbm3937@gmail.com';
 $name    = strip_tags(trim($data['이름']      ?? ''));
 $phone   = strip_tags(trim($data['핸드폰번호'] ?? ''));
 $email   = strip_tags(trim($data['이메일']     ?? ''));

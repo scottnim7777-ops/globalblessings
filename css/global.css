@@ -16,7 +16,7 @@
   --gold-light:   #D4A855;
   --sage:         #5E7E5E;
   --sage-light:   #7FA07F;
-  --forest:       #2C3A2E;
+  --forest:       #2E6F99;
   --stone:        #E8E0D5;
   --stone-mid:    #C8BEB4;
   --white:        #FFFFFF;
@@ -397,7 +397,7 @@ html[lang="ko"] .lang-en { display: none !important; }
   left: 0;
   right: 0;
   z-index: 500;
-  background: linear-gradient(180deg, #1d2e1f 0%, #162217 100%);
+  background: linear-gradient(180deg, #1D455F 0%, #132F40 100%);
   border-top: 1px solid rgba(196, 147, 64, 0.38);
   padding: 12px 14px calc(18px + env(safe-area-inset-bottom, 0px));
   gap: 10px;

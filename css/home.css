@@ -29,9 +29,9 @@
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(44, 58, 46, 0.82) 0%,
-    rgba(44, 58, 46, 0.55) 55%,
-    rgba(44, 58, 46, 0.2) 100%
+    rgba(46, 111, 153, 0.55) 0%,
+    rgba(46, 111, 153, 0.35) 55%,
+    rgba(46, 111, 153, 0.1) 100%
   );
 }
 .hero__content {
@@ -382,11 +382,11 @@ html[lang="ko"] .rcfe-compare__item--active::before { content: '추천 시설'; 
 .gallery-preview__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(44, 58, 46, 0);
+  background: rgba(46, 111, 153, 0);
   transition: background var(--duration-base) var(--ease-out);
 }
 .gallery-preview__item:hover .gallery-preview__overlay {
-  background: rgba(44, 58, 46, 0.18);
+  background: rgba(46, 111, 153, 0.18);
 }
 .gallery-preview__item--tall { grid-row: 1 / 3; }
 

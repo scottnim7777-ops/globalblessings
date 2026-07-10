@@ -299,7 +299,7 @@
    FOOTER
    ============================================================ */
 .footer {
-  background-color: var(--walnut);
+  background-color: var(--forest);
   color: var(--stone);
   padding: var(--space-14) 0 var(--space-6);
 }

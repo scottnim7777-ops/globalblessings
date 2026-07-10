@@ -30,7 +30,7 @@
 .gallery-item:hover img { transform: scale(1.05); }
 .gallery-item__overlay {
   position: absolute; inset: 0;
-  background: rgba(44,58,46,0); display: flex;
+  background: rgba(46,111,153,0); display: flex;
   align-items: center; justify-content: center;
   color: var(--ivory); font-family: var(--font-body);
   font-size: var(--text-sm); font-weight: 500;
@@ -38,7 +38,7 @@
   opacity: 0; transition: all var(--duration-fast);
 }
 .gallery-item:hover .gallery-item__overlay {
-  background: rgba(44,58,46,.55); opacity: 1;
+  background: rgba(46,111,153,.55); opacity: 1;
 }
 .gallery-item.hidden { display: none; }
 
