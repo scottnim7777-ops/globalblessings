@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
           '이름':       nameEl.value.trim(),
           '핸드폰번호':  phoneEl.value.trim(),
           'email':      form.querySelector('#cf-email').value.trim(),
-          '유입경로':   form.querySelector('#cf-hear').value,
           '문의내용':   messageEl.value.trim(),
         }),
       });
@@ -63,14 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
       loadingEl.hidden = true;
     }
   });
-
-  /* sync dual selects (EN/KR) */
-  const hearEn = form.querySelector('#cf-hear');
-  const hearKr = form.querySelector('#cf-hear-kr');
-  if (hearEn && hearKr) {
-    hearEn.addEventListener('change', () => { hearKr.value = hearEn.value; });
-    hearKr.addEventListener('change', () => { hearEn.value = hearKr.value; });
-  }
 
   /* clear error state on input */
   form.querySelectorAll('input, textarea').forEach(el => {

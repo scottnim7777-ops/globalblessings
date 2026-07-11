@@ -7,10 +7,12 @@
   <meta name="description" content="Contact Global Blessings Mission RCFE in Los Angeles. Schedule a tour, call us at 323-238-7088, or send us a message." />
   <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico" />
   <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/cms.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/contact.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/cms.js" defer></script>
   <script src="js/contact.js" defer></script>
 </head>
 <body>
@@ -58,15 +60,15 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow lang-en">We're Here for You</p>
-        <p class="eyebrow lang-kr">언제든 연락하세요</p>
+        <p class="eyebrow lang-en" data-cms-id="contact-hero-eyebrow-en" data-cms-type="text">We're Here for You</p>
+        <p class="eyebrow lang-kr" data-cms-id="contact-hero-eyebrow-kr" data-cms-type="text">언제든 연락하세요</p>
         <h1>
-          <span class="lang-en">Let's Talk.</span>
-          <span class="lang-kr">함께 이야기해요.</span>
+          <span class="lang-en" data-cms-id="contact-hero-title-en" data-cms-type="text">Let's Talk.</span>
+          <span class="lang-kr" data-cms-id="contact-hero-title-kr" data-cms-type="text">함께 이야기해요.</span>
         </h1>
         <p>
-          <span class="lang-en">Whether you have questions, want to schedule a tour, or just need guidance, we're here.</span>
-          <span class="lang-kr">궁금한 점, 투어 예약, 상담이 필요하시면 저희가 함께하겠습니다.</span>
+          <span class="lang-en" data-cms-id="contact-hero-sub-en" data-cms-type="text">Whether you have questions, want to schedule a tour, or just need guidance, we're here.</span>
+          <span class="lang-kr" data-cms-id="contact-hero-sub-kr" data-cms-type="text">궁금한 점, 투어 예약, 상담이 필요하시면 저희가 함께하겠습니다.</span>
         </p>
       </div>
     </section>
@@ -76,13 +78,14 @@
     <section class="quick-contact">
       <div class="container">
         <div class="quick-contact__grid">
-          <a href="tel:3232387088" class="quick-contact__item">
+          <div class="quick-contact__item">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <div>
               <strong class="lang-en">Call Us</strong><strong class="lang-kr">전화</strong>
-              <p><a href="tel:3232387088">323-238-7088</a></p>
+              <p><a href="tel:3232387088"><span data-cms-id="phone-1" data-cms-type="text">323-238-7088</span></a></p>
+              <p><a href="tel:3107807697"><span data-cms-id="phone-2" data-cms-type="text">310-780-7697</span></a></p>
             </div>
-          </a>
+          </div>
           <a href="mailto:gbm3937@gmail.com" class="quick-contact__item">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <div>
@@ -94,8 +97,8 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
               <strong class="lang-en">Location</strong><strong class="lang-kr">위치</strong>
-              <p><span class="lang-en">South Los Angeles, CA</span><span class="lang-kr">남 로스앤젤레스, CA</span></p>
-              <p style="font-size:0.8rem;color:#888;margin-top:4px;"><span class="lang-en">Exact address provided after inquiry</span><span class="lang-kr">정확한 주소는 문의 후 안내드립니다</span></p>
+              <p><span class="lang-en" data-cms-id="addr-en" data-cms-type="text">Los Angeles, CA</span><span class="lang-kr" data-cms-id="addr-kr" data-cms-type="text">로스앤젤레스, CA</span></p>
+              <p style="font-size:var(--text-xs);color:#6B6259;margin-top:var(--space-1);"><span class="lang-en">Exact address provided after inquiry</span><span class="lang-kr">정확한 주소는 문의 후 안내드립니다</span></p>
             </div>
           </div>
           <div class="quick-contact__item">
@@ -118,16 +121,16 @@
           <!-- Form -->
           <div class="contact-form-wrap">
             <p class="eyebrow reveal">
-              <span class="lang-en">Send a Message</span>
-              <span class="lang-kr">메시지 보내기</span>
+              <span class="lang-en" data-cms-id="contact-form-eyebrow-en" data-cms-type="text">Send a Message</span>
+              <span class="lang-kr" data-cms-id="contact-form-eyebrow-kr" data-cms-type="text">메시지 보내기</span>
             </p>
             <h2 class="reveal reveal-delay-1">
-              <span class="lang-en">We'll Get Back to You</span>
-              <span class="lang-kr">빠르게 답장드릴게요</span>
+              <span class="lang-en" data-cms-id="contact-form-title-en" data-cms-type="text">We'll Get Back to You</span>
+              <span class="lang-kr" data-cms-id="contact-form-title-kr" data-cms-type="text">빠르게 답장드릴게요</span>
             </h2>
             <p class="reveal reveal-delay-2" style="color:#6B6259;margin-bottom:var(--space-6);">
-              <span class="lang-en">To ensure the best possible care, we first assess each resident's needs through a brief consultation. Fill out the form and we'll reach out to guide you through the next steps.</span>
-              <span class="lang-kr">최적의 돌봄을 위해 먼저 간단한 상담을 통해 입주 가능 여부를 확인합니다. 양식을 작성해 주시면 담당자가 안내 드리겠습니다.</span>
+              <span class="lang-en" data-cms-id="contact-form-sub-en" data-cms-type="text">To ensure the best possible care, we first assess each resident's needs through a brief consultation. Fill out the form and we'll reach out to guide you through the next steps.</span>
+              <span class="lang-kr" data-cms-id="contact-form-sub-kr" data-cms-type="text">최적의 돌봄을 위해 먼저 간단한 상담을 통해 입주 가능 여부를 확인합니다. 양식을 작성해 주시면 담당자가 안내 드리겠습니다.</span>
             </p>
 
             <form class="contact-form reveal reveal-delay-3" id="contact-form"
@@ -162,31 +165,6 @@
                 </label>
                 <input type="email" id="cf-email" name="email" autocomplete="email"
                   placeholder="example@email.com" required />
-              </div>
-
-              <div class="form-group">
-                <label for="cf-hear">
-                  <span class="lang-en">How did you hear about us?</span>
-                  <span class="lang-kr">어떻게 알게 되셨나요?</span>
-                </label>
-                <select id="cf-hear" name="유입경로" class="lang-en">
-                  <option value="" disabled selected>Please select</option>
-                  <option value="구글 검색">Google Search</option>
-                  <option value="지인 소개">Friend or Family</option>
-                  <option value="병원·의사 소개">Hospital or Doctor</option>
-                  <option value="교회·커뮤니티">Church or Community</option>
-                  <option value="소셜 미디어">Social Media</option>
-                  <option value="기타">Other</option>
-                </select>
-                <select id="cf-hear-kr" name="유입경로" class="lang-kr" aria-hidden="true">
-                  <option value="" disabled selected>선택해 주세요</option>
-                  <option value="구글 검색">구글 검색</option>
-                  <option value="지인 소개">지인 소개</option>
-                  <option value="병원·의사 소개">병원 / 의사 소개</option>
-                  <option value="교회·커뮤니티">교회 / 커뮤니티</option>
-                  <option value="소셜 미디어">소셜 미디어</option>
-                  <option value="기타">기타</option>
-                </select>
               </div>
 
               <div class="form-group">
@@ -227,8 +205,8 @@
                 <div>
                   <strong class="lang-en">Something went wrong.</strong>
                   <strong class="lang-kr">전송에 실패했습니다.</strong>
-                  <p class="lang-en">Please call us directly at <a href="tel:3232387088">323-238-7088</a>.</p>
-                  <p class="lang-kr">직접 전화 주세요. <a href="tel:3232387088">323-238-7088</a></p>
+                  <p class="lang-en">Please call us directly at <a href="tel:3232387088"><span data-cms-id="phone-1" data-cms-type="text">323-238-7088</span></a>.</p>
+                  <p class="lang-kr">직접 전화 주세요. <a href="tel:3232387088"><span data-cms-id="phone-1" data-cms-type="text">323-238-7088</span></a></p>
                 </div>
               </div>
 
@@ -246,7 +224,7 @@
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="South Los Angeles area map"
+                title="Los Angeles area map"
               ></iframe>
             </div>
             <div class="contact-info-block">
@@ -258,38 +236,39 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                   <strong class="lang-en">Location</strong><strong class="lang-kr">위치</strong>
-                  <p><span class="lang-en">South Los Angeles, CA</span><span class="lang-kr">남 로스앤젤레스, CA</span></p>
-                  <p style="font-size:0.8rem;color:#888;margin-top:4px;"><span class="lang-en">Exact address provided after initial inquiry</span><span class="lang-kr">초기 문의 후 정확한 주소를 안내드립니다</span></p>
+                  <p><span class="lang-en" data-cms-id="addr-en" data-cms-type="text">Los Angeles, CA</span><span class="lang-kr" data-cms-id="addr-kr" data-cms-type="text">로스앤젤레스, CA</span></p>
+                  <p style="font-size:var(--text-xs);color:#6B6259;margin-top:var(--space-1);"><span class="lang-en">Exact address provided after initial inquiry</span><span class="lang-kr">초기 문의 후 정확한 주소를 안내드립니다</span></p>
                 </div>
               </div>
               <div class="contact-info-block__item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <div>
                   <strong class="lang-en">Phone</strong><strong class="lang-kr">전화</strong>
-                  <p><a href="tel:3232387088">323-238-7088</a></p>
+                  <p><a href="tel:3232387088"><span data-cms-id="phone-1" data-cms-type="text">323-238-7088</span></a></p>
+                  <p><a href="tel:3107807697"><span data-cms-id="phone-2" data-cms-type="text">310-780-7697</span></a></p>
                 </div>
               </div>
               <div class="contact-info-block__item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <div>
                   <strong class="lang-en">Email</strong><strong class="lang-kr">이메일</strong>
-                  <p><a href="mailto:gbm3937@gmail.com">gbm3937@gmail.com</a></p>
+                  <p><a href="mailto:gbm3937@gmail.com"><span data-cms-id="email-main" data-cms-type="text">gbm3937@gmail.com</span></a></p>
                 </div>
               </div>
               <div class="contact-info-block__item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 <div>
                   <strong class="lang-en">Administrator</strong><strong class="lang-kr">관리자</strong>
-                  <p class="lang-en">Pastor &amp; Chaplain Eunice Bodak</p>
-                  <p class="lang-kr">목사 · 채플린 Eunice Bodak</p>
+                  <p class="lang-en" data-cms-id="contact-admin-name-en" data-cms-type="text">Pastor &amp; Chaplain Eunice Bodak</p>
+                  <p class="lang-kr" data-cms-id="contact-admin-name-kr" data-cms-type="text">목사 · 채플린 Eunice Bodak</p>
                 </div>
               </div>
               <div class="contact-info-block__item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 <div>
                   <strong class="lang-en">Hours</strong><strong class="lang-kr">운영시간</strong>
-                  <p class="lang-en">Mon to Fri 9:00 AM to 5:00 PM</p>
-                  <p class="lang-kr">월~금 오전 9시 – 오후 5시</p>
+                  <p class="lang-en" data-cms-id="hours-en" data-cms-type="text">Mon to Fri 9:00 AM to 5:00 PM</p>
+                  <p class="lang-kr" data-cms-id="hours-kr" data-cms-type="text">월~금 오전 9시 – 오후 5시</p>
                 </div>
               </div>
             </div>
@@ -309,8 +288,8 @@
           <a href="index.html" class="navbar__logo" style="margin-bottom:var(--space-3);display:inline-flex;">
             <img src="assets/logo/logo.png" alt="Global Blessings Mission RCFE" style="height:160px;width:auto;object-fit:contain;" />
           </a>
-          <p class="lang-en">"Providing compassionate care for body, mind, and spirit."<br/>Los Angeles, CA</p>
-          <p class="lang-kr">"몸과 마음, 그리고 영혼을 돌보는 따뜻한 섬김."<br/>로스앤젤레스, CA</p>
+          <p class="lang-en" data-cms-id="footer-tagline-en" data-cms-type="text">"Providing compassionate care for body, mind, and spirit."<br/>Los Angeles, CA</p>
+          <p class="lang-kr" data-cms-id="footer-tagline-kr" data-cms-type="text">"몸과 마음, 그리고 영혼을 돌보는 따뜻한 섬김."<br/>로스앤젤레스, CA</p>
         </div>
         <div class="footer__col">
           <h4 class="lang-en">Navigation</h4><h4 class="lang-kr">메뉴</h4>
@@ -323,18 +302,19 @@
         </div>
         <div class="footer__col footer__contact">
           <h4 class="lang-en">Contact</h4><h4 class="lang-kr">연락처</h4>
-          <p><span class="lang-en">South Los Angeles, CA</span><span class="lang-kr">남 로스앤젤레스, CA</span></p>
-          <p style="margin-top:var(--space-2);"><a href="tel:3232387088">323-238-7088</a></p>
-          <p style="margin-top:var(--space-2);"><a href="mailto:gbm3937@gmail.com">gbm3937@gmail.com</a></p>
+          <p><span class="lang-en" data-cms-id="addr-en" data-cms-type="text">Los Angeles, CA</span><span class="lang-kr" data-cms-id="addr-kr" data-cms-type="text">로스앤젤레스, CA</span></p>
+          <p style="margin-top:var(--space-2);"><a href="tel:3232387088"><span data-cms-id="phone-1" data-cms-type="text">323-238-7088</span></a><br/><a href="tel:3107807697"><span data-cms-id="phone-2" data-cms-type="text">310-780-7697</span></a></p>
+          <p style="margin-top:var(--space-2);"><a href="mailto:gbm3937@gmail.com"><span data-cms-id="email-main" data-cms-type="text">gbm3937@gmail.com</span></a></p>
         </div>
         <div class="footer__col">
           <h4 class="lang-en">Hours</h4><h4 class="lang-kr">운영시간</h4>
-          <p style="font-size:var(--text-sm);color:rgba(232,224,213,0.7);line-height:1.9;"><span class="lang-en">Mon to Fri 9:00 AM to 5:00 PM</span><span class="lang-kr">월~금 오전 9시 – 오후 5시</span></p>
+          <p style="font-size:var(--text-sm);color:rgba(232,224,213,0.7);line-height:1.9;"><span class="lang-en" data-cms-id="hours-en" data-cms-type="text">Mon to Fri 9:00 AM to 5:00 PM</span><span class="lang-kr" data-cms-id="hours-kr" data-cms-type="text">월~금 오전 9시 – 오후 5시</span></p>
         </div>
       </div>
       <div class="footer__bottom">
         <p class="lang-en">© 2026 Global Blessings Mission RCFE. All Rights Reserved.</p>
         <p class="lang-kr">© 2026 Global Blessings Mission RCFE. 모든 권리 보유.</p>
+        <p class="footer__admin-link"><a href="edit-login.html"><span class="lang-en">Site Management</span><span class="lang-kr">사이트 관리</span></a></p>
       </div>
     </div>
   </footer>

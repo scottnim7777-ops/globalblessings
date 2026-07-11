@@ -14,6 +14,7 @@
   --walnut:       #2B2622;
   --gold:         #B8893B;
   --gold-light:   #D4A855;
+  --gold-on-dark: #F0C869;
   --sage:         #5E7E5E;
   --sage-light:   #7FA07F;
   --forest:       #2E6F99;
@@ -200,6 +201,7 @@ p { font-size: var(--text-lg); line-height: 1.75; }
   align-items: center;
   gap: 0.5rem;
 }
+.faith-section__text .eyebrow { color: var(--gold-on-dark); }
 .section-header:not(.center) .eyebrow::before,
 .faith-section__text .eyebrow::before,
 .contact-form-wrap .eyebrow::before,

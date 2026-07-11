@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>사이트 관리자 로그인 | Global Blessings</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+      background: #F7F2E9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .box {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(43,38,34,0.12);
+      padding: 40px 32px;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+    .box img { height: 64px; margin-bottom: 16px; }
+    h1 { font-size: 22px; color: #2B2622; margin-bottom: 8px; }
+    p.sub { font-size: 15px; color: #6B6259; margin-bottom: 28px; line-height: 1.6; }
+    label { display: block; text-align: left; font-size: 15px; color: #2B2622; margin-bottom: 8px; font-weight: 600; }
+    input[type="password"] {
+      width: 100%;
+      font-size: 20px;
+      padding: 14px 16px;
+      border: 2px solid #E8E0D5;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      min-height: 52px;
+    }
+    input[type="password"]:focus { outline: none; border-color: #2E6F99; }
+    button {
+      width: 100%;
+      min-height: 54px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      background: #2E6F99;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:active { transform: scale(0.98); }
+    .msg { margin-top: 14px; font-size: 14px; color: #B8393B; min-height: 20px; }
+    .msg.ok { color: #2E6F99; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="assets/logo/logo.png" alt="Global Blessings" />
+    <h1>사이트 관리자 로그인</h1>
+    <p class="sub">비밀번호를 입력하시면<br/>홈페이지 내용을 바로 수정할 수 있어요.</p>
+    <form id="login-form">
+      <label for="pw">비밀번호</label>
+      <input type="password" id="pw" name="pw" inputmode="text" autocomplete="current-password" autofocus />
+      <button type="submit">로그인</button>
+      <p class="msg" id="msg"></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const pw = document.getElementById('pw').value;
+      const msg = document.getElementById('msg');
+      msg.textContent = '확인 중...';
+      msg.className = 'msg';
+      fetch('/.netlify/functions/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw }),
+      })
+        .then((r) => r.json())
+        .then((res) => {
+          if (res.ok) {
+            msg.textContent = '로그인 성공! 이동 중...';
+            msg.className = 'msg ok';
+            setTimeout(() => { location.href = 'index.html'; }, 600);
+          } else {
+            msg.textContent = '비밀번호가 올바르지 않습니다.';
+          }
+        })
+        .catch(() => { msg.textContent = '오류가 발생했습니다. 다시 시도해 주세요.'; });
+    });
+  </script>
+</body>
+</html>

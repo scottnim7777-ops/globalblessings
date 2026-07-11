@@ -16,6 +16,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/cms.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/services.css" />
   <link rel="stylesheet" href="css/home.css" />
@@ -23,6 +24,7 @@
   <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/cms.js" defer></script>
 </head>
 <body>
 
@@ -100,21 +102,21 @@
 
       <div class="container hero__content">
         <div class="hero__text">
-          <p class="eyebrow lang-en reveal">Los Angeles, California</p>
-          <p class="eyebrow lang-kr reveal">로스앤젤레스, 캘리포니아</p>
+          <p class="eyebrow lang-en reveal" data-cms-id="home-hero-eyebrow-en" data-cms-type="text">Los Angeles, California</p>
+          <p class="eyebrow lang-kr reveal" data-cms-id="home-hero-eyebrow-kr" data-cms-type="text">로스앤젤레스, 캘리포니아</p>
 
           <h1 class="reveal reveal-delay-1">
-            <span class="lang-en"><span class="hero__glow-text">Caring Hearts,</span><br/>Better Tomorrow.</span>
-            <span class="lang-kr"><span class="hero__glow-text">따뜻한 마음으로,</span><br/>편안한 내일을 함께합니다.</span>
+            <span class="lang-en" data-cms-id="home-hero-title-en" data-cms-type="text"><span class="hero__glow-text">Caring Hearts,</span><br/>Better Tomorrow.</span>
+            <span class="lang-kr" data-cms-id="home-hero-title-kr" data-cms-type="text"><span class="hero__glow-text">따뜻한 마음으로,</span><br/>편안한 내일을 함께합니다.</span>
           </h1>
 
           <p class="hero__sub reveal reveal-delay-2">
-            <span class="lang-en">Faith Based Senior Care with Compassion and Excellence.<br/>Personalized attention for body, mind and spirit, always present.</span>
-            <span class="lang-kr">사랑과 전문성을 갖춘 신앙 기반 Care 서비스.<br/>사랑과 존중으로 어르신들의 건강한 삶과 존엄한 노후를 지원합니다.</span>
+            <span class="lang-en" data-cms-id="home-hero-sub-en" data-cms-type="text">Faith Based Senior Care with Compassion and Excellence.<br/>Personalized attention for body, mind and spirit, always present.</span>
+            <span class="lang-kr" data-cms-id="home-hero-sub-kr" data-cms-type="text">사랑과 전문성을 갖춘 신앙 기반 Care 서비스.<br/>사랑과 존중으로 어르신들의 건강한 삶과 존엄한 노후를 지원합니다.</span>
           </p>
           <p class="hero__services-tag reveal reveal-delay-3">
-            <span class="lang-en">Hospice Care · ALW Services · Spiritual Care · Professional Counseling</span>
-            <span class="lang-kr">호스피스 돌봄 · ALW 지원 · 영적 돌봄 · 전문 상담</span>
+            <span class="lang-en" data-cms-id="home-hero-tag-en" data-cms-type="text">Hospice Care · ALW Services · Spiritual Care · Professional Counseling</span>
+            <span class="lang-kr" data-cms-id="home-hero-tag-kr" data-cms-type="text">호스피스 돌봄 · ALW 지원 · 영적 돌봄 · 전문 상담</span>
           </p>
 
           <div class="hero__ctas reveal reveal-delay-4">
@@ -139,26 +141,26 @@
         <div class="trust-bar__inner">
           <div class="trust-bar__item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span class="lang-en">Licensed RCFE Facility</span>
-            <span class="lang-kr">공인 RCFE 시설</span>
+            <span class="lang-en" data-cms-id="home-trust1-en" data-cms-type="text">Licensed RCFE Facility</span>
+            <span class="lang-kr" data-cms-id="home-trust1-kr" data-cms-type="text">공인 RCFE 시설</span>
           </div>
           <div class="trust-bar__divider" aria-hidden="true"></div>
           <div class="trust-bar__item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            <span class="lang-en">Pastor & Chaplain Led Care</span>
-            <span class="lang-kr">목사·채플린 운영 시설</span>
+            <span class="lang-en" data-cms-id="home-trust2-en" data-cms-type="text">Pastor & Chaplain Led Care</span>
+            <span class="lang-kr" data-cms-id="home-trust2-kr" data-cms-type="text">목사·채플린 운영 시설</span>
           </div>
           <div class="trust-bar__divider" aria-hidden="true"></div>
           <div class="trust-bar__item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span class="lang-en">24-Hour Supervision</span>
-            <span class="lang-kr">24시간 돌봄</span>
+            <span class="lang-en" data-cms-id="home-trust3-en" data-cms-type="text">24-Hour Supervision</span>
+            <span class="lang-kr" data-cms-id="home-trust3-kr" data-cms-type="text">24시간 돌봄</span>
           </div>
           <div class="trust-bar__divider" aria-hidden="true"></div>
           <div class="trust-bar__item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span class="lang-en">South Los Angeles, CA</span>
-            <span class="lang-kr">남 로스앤젤레스, CA</span>
+            <span class="lang-en" data-cms-id="addr-en" data-cms-type="text">Los Angeles, CA</span>
+            <span class="lang-kr" data-cms-id="addr-kr" data-cms-type="text">로스앤젤레스, CA</span>
           </div>
         </div>
       </div>
@@ -173,7 +175,7 @@
           <div class="welcome__image reveal">
             <div class="welcome__img-frame">
               <img
-                src="assets/images/hands_holding_cropped.webp"
+                src="assets/images/hands_holding_cropped.webp" data-cms-id="img-welcome" data-cms-type="image"
                 alt="Caregiver gently holding the hands of a senior resident"
                 loading="lazy"
               />
@@ -185,20 +187,20 @@
           </div>
           <div class="welcome__text">
             <p class="eyebrow reveal">
-              <span class="lang-en">Welcome</span>
-              <span class="lang-kr">환영합니다</span>
+              <span class="lang-en" data-cms-id="home-welcome-eyebrow-en" data-cms-type="text">Welcome</span>
+              <span class="lang-kr" data-cms-id="home-welcome-eyebrow-kr" data-cms-type="text">환영합니다</span>
             </p>
             <h2 class="reveal reveal-delay-1">
-              <span class="lang-en">A Home Built on Faith, Compassion &amp; Dignity.</span>
-              <span class="lang-kr">신앙과 사랑, 존엄 위에 세워진 집.</span>
+              <span class="lang-en" data-cms-id="home-welcome-title-en" data-cms-type="text">A Home Built on Faith, Compassion &amp; Dignity.</span>
+              <span class="lang-kr" data-cms-id="home-welcome-title-kr" data-cms-type="text">신앙과 사랑, 존엄 위에 세워진 집.</span>
             </h2>
             <div class="welcome__body reveal reveal-delay-2">
-              <p class="lang-en">Welcome to Global Blessings Mission RCFE. We are committed to providing compassionate, personalized care in a safe, comfortable, and family centered environment. Our mission is to support each resident's physical, emotional, and spiritual well-being with dignity, respect, and love.</p>
-              <p class="lang-kr">Global Blessings Mission RCFE에 오신 것을 환영합니다. 저희는 안전하고 편안하며 가족 같은 환경 속에서 맞춤형 돌봄을 제공하기 위해 최선을 다하고 있습니다. 존엄과 존중, 사랑을 바탕으로 신체적·정서적·영적 건강을 함께 돌보는 것이 저희의 사명입니다.</p>
+              <p class="lang-en" data-cms-id="home-welcome-body1-en" data-cms-type="text">Welcome to Global Blessings Mission RCFE. We are committed to providing compassionate, personalized care in a safe, comfortable, and family centered environment. Our mission is to support each resident's physical, emotional, and spiritual well-being with dignity, respect, and love.</p>
+              <p class="lang-kr" data-cms-id="home-welcome-body1-kr" data-cms-type="text">Global Blessings Mission RCFE에 오신 것을 환영합니다. 저희는 안전하고 편안하며 가족 같은 환경 속에서 맞춤형 돌봄을 제공하기 위해 최선을 다하고 있습니다. 존엄과 존중, 사랑을 바탕으로 신체적·정서적·영적 건강을 함께 돌보는 것이 저희의 사명입니다.</p>
             </div>
             <div class="welcome__body reveal reveal-delay-3">
-              <p class="lang-en">As a Pastor and Chaplain-led care home, we offer not only quality daily care but also spiritual encouragement, prayer, and compassionate support for residents and their families.</p>
-              <p class="lang-kr">목사와 채플린이 운영하는 시설로서 일상적인 돌봄뿐 아니라 영적 격려와 기도, 따뜻한 정서적 지원을 제공하여 입주자와 가족이 평안함을 누릴 수 있도록 돕고 있습니다.</p>
+              <p class="lang-en" data-cms-id="home-welcome-body2-en" data-cms-type="text">As a Pastor and Chaplain-led care home, we offer not only quality daily care but also spiritual encouragement, prayer, and compassionate support for residents and their families.</p>
+              <p class="lang-kr" data-cms-id="home-welcome-body2-kr" data-cms-type="text">목사와 채플린이 운영하는 시설로서 일상적인 돌봄뿐 아니라 영적 격려와 기도, 따뜻한 정서적 지원을 제공하여 입주자와 가족이 평안함을 누릴 수 있도록 돕고 있습니다.</p>
             </div>
             <a href="about.html" class="btn btn--outline reveal reveal-delay-4">
               <span class="lang-en">Our Story</span>
@@ -217,52 +219,52 @@
       <div class="container">
         <div class="section-header center">
           <span class="eyebrow">
-            <span class="lang-en">Our Promise</span>
-            <span class="lang-kr">드리는 약속</span>
+            <span class="lang-en" data-cms-id="home-pillars-eyebrow-en" data-cms-type="text">Our Promise</span>
+            <span class="lang-kr" data-cms-id="home-pillars-eyebrow-kr" data-cms-type="text">드리는 약속</span>
           </span>
           <h2 class="reveal">
-            <span class="lang-en">Five Pillars of Care</span>
-            <span class="lang-kr">돌봄의 다섯 기둥</span>
+            <span class="lang-en" data-cms-id="home-pillars-title-en" data-cms-type="text">Five Pillars of Care</span>
+            <span class="lang-kr" data-cms-id="home-pillars-title-kr" data-cms-type="text">돌봄의 다섯 기둥</span>
           </h2>
           <p class="reveal reveal-delay-1">
-            <span class="lang-en">Every decision we make is grounded in these core values.</span>
-            <span class="lang-kr">모든 돌봄의 기준이 되는 네 가지 핵심 가치입니다.</span>
+            <span class="lang-en" data-cms-id="home-pillars-sub-en" data-cms-type="text">Every decision we make is grounded in these core values.</span>
+            <span class="lang-kr" data-cms-id="home-pillars-sub-kr" data-cms-type="text">모든 돌봄의 기준이 되는 네 가지 핵심 가치입니다.</span>
           </p>
         </div>
         <ol class="editorial-values">
           <li class="editorial-values__item reveal">
             <span class="editorial-values__num" aria-hidden="true">01</span>
             <div>
-              <h3><span class="lang-en">Comfortable Living</span><span class="lang-kr">편안한 생활</span></h3>
-              <p><span class="lang-en">A warm, homelike environment where seniors feel truly at home.</span><span class="lang-kr">어르신이 진정한 집처럼 느낄 수 있는 따뜻한 환경.</span></p>
+              <h3><span class="lang-en" data-cms-id="home-pillar1-title-en" data-cms-type="text">Comfortable Living</span><span class="lang-kr" data-cms-id="home-pillar1-title-kr" data-cms-type="text">편안한 생활</span></h3>
+              <p><span class="lang-en" data-cms-id="home-pillar1-desc-en" data-cms-type="text">A warm, homelike environment where seniors feel truly at home.</span><span class="lang-kr" data-cms-id="home-pillar1-desc-kr" data-cms-type="text">어르신이 진정한 집처럼 느낄 수 있는 따뜻한 환경.</span></p>
             </div>
           </li>
           <li class="editorial-values__item reveal reveal-delay-1">
             <span class="editorial-values__num" aria-hidden="true">02</span>
             <div>
-              <h3><span class="lang-en">Compassionate Care</span><span class="lang-kr">따뜻한 돌봄</span></h3>
-              <p><span class="lang-en">Care delivered with genuine love, empathy, and spiritual purpose.</span><span class="lang-kr">진정한 사랑과 공감, 영적 사명으로 제공하는 돌봄.</span></p>
+              <h3><span class="lang-en" data-cms-id="home-pillar2-title-en" data-cms-type="text">Compassionate Care</span><span class="lang-kr" data-cms-id="home-pillar2-title-kr" data-cms-type="text">따뜻한 돌봄</span></h3>
+              <p><span class="lang-en" data-cms-id="home-pillar2-desc-en" data-cms-type="text">Care delivered with genuine love, empathy, and spiritual purpose.</span><span class="lang-kr" data-cms-id="home-pillar2-desc-kr" data-cms-type="text">진정한 사랑과 공감, 영적 사명으로 제공하는 돌봄.</span></p>
             </div>
           </li>
           <li class="editorial-values__item reveal reveal-delay-2">
             <span class="editorial-values__num" aria-hidden="true">03</span>
             <div>
-              <h3><span class="lang-en">Personalized Support</span><span class="lang-kr">맞춤형 지원</span></h3>
-              <p><span class="lang-en">Every resident receives a care plan tailored to their unique needs.</span><span class="lang-kr">모든 입주자에게 맞춤형 돌봄 계획을 제공합니다.</span></p>
+              <h3><span class="lang-en" data-cms-id="home-pillar3-title-en" data-cms-type="text">Personalized Support</span><span class="lang-kr" data-cms-id="home-pillar3-title-kr" data-cms-type="text">맞춤형 지원</span></h3>
+              <p><span class="lang-en" data-cms-id="home-pillar3-desc-en" data-cms-type="text">Every resident receives a care plan tailored to their unique needs.</span><span class="lang-kr" data-cms-id="home-pillar3-desc-kr" data-cms-type="text">모든 입주자에게 맞춤형 돌봄 계획을 제공합니다.</span></p>
             </div>
           </li>
           <li class="editorial-values__item reveal reveal-delay-3">
             <span class="editorial-values__num" aria-hidden="true">04</span>
             <div>
-              <h3><span class="lang-en">Safe &amp; Secure</span><span class="lang-kr">안전한 환경</span></h3>
-              <p><span class="lang-en">24-hour supervision in a secure environment for complete peace of mind.</span><span class="lang-kr">24시간 상시 감독으로 가족 모두가 안심할 수 있는 안전한 환경.</span></p>
+              <h3><span class="lang-en" data-cms-id="home-pillar4-title-en" data-cms-type="text">Safe &amp; Secure</span><span class="lang-kr" data-cms-id="home-pillar4-title-kr" data-cms-type="text">안전한 환경</span></h3>
+              <p><span class="lang-en" data-cms-id="home-pillar4-desc-en" data-cms-type="text">24-hour supervision in a secure environment for complete peace of mind.</span><span class="lang-kr" data-cms-id="home-pillar4-desc-kr" data-cms-type="text">24시간 상시 감독으로 가족 모두가 안심할 수 있는 안전한 환경.</span></p>
             </div>
           </li>
           <li class="editorial-values__item reveal reveal-delay-4">
             <span class="editorial-values__num" aria-hidden="true">05</span>
             <div>
-              <h3><span class="lang-en">Prayer &amp; Worship</span><span class="lang-kr">기도와 예배</span></h3>
-              <p><span class="lang-en">Uplifting daily prayer and worship time to nourish the spirit and bring comfort to every resident.</span><span class="lang-kr">입주자의 영혼을 새롭게 하는 기도와 예배 시간을 정기적으로 제공합니다.</span></p>
+              <h3><span class="lang-en" data-cms-id="home-pillar5-title-en" data-cms-type="text">Prayer &amp; Worship</span><span class="lang-kr" data-cms-id="home-pillar5-title-kr" data-cms-type="text">기도와 예배</span></h3>
+              <p><span class="lang-en" data-cms-id="home-pillar5-desc-en" data-cms-type="text">Uplifting daily prayer and worship time to nourish the spirit and bring comfort to every resident.</span><span class="lang-kr" data-cms-id="home-pillar5-desc-kr" data-cms-type="text">입주자의 영혼을 새롭게 하는 기도와 예배 시간을 정기적으로 제공합니다.</span></p>
             </div>
           </li>
         </ol>
@@ -277,16 +279,16 @@
       <div class="container">
         <div class="section-header">
           <span class="eyebrow">
-            <span class="lang-en">Understanding Your Options</span>
-            <span class="lang-kr">어떤 돌봄이 맞는지 알아보세요</span>
+            <span class="lang-en" data-cms-id="home-rcfe-eyebrow-en" data-cms-type="text">Understanding Your Options</span>
+            <span class="lang-kr" data-cms-id="home-rcfe-eyebrow-kr" data-cms-type="text">어떤 돌봄이 맞는지 알아보세요</span>
           </span>
           <h2 class="reveal">
-            <span class="lang-en">What Is an RCFE?</span>
-            <span class="lang-kr">RCFE란 무엇인가요?</span>
+            <span class="lang-en" data-cms-id="home-rcfe-title-en" data-cms-type="text">What Is an RCFE?</span>
+            <span class="lang-kr" data-cms-id="home-rcfe-title-kr" data-cms-type="text">RCFE란 무엇인가요?</span>
           </h2>
           <p class="reveal reveal-delay-1">
-            <span class="lang-en">A Residential Care Facility for the Elderly (RCFE) offers a unique middle ground: more personal than a nursing home, more supported than staying alone.</span>
-            <span class="lang-kr">RCFE(노인 거주형 돌봄 시설)는 요양원보다 가정적이고, 혼자 생활하는 것보다 훨씬 안전하고 따뜻한 돌봄을 제공합니다.</span>
+            <span class="lang-en" data-cms-id="home-rcfe-sub-en" data-cms-type="text">A Residential Care Facility for the Elderly (RCFE) offers a unique middle ground: more personal than a nursing home, more supported than staying alone.</span>
+            <span class="lang-kr" data-cms-id="home-rcfe-sub-kr" data-cms-type="text">RCFE(노인 거주형 돌봄 시설)는 요양원보다 가정적이고, 혼자 생활하는 것보다 훨씬 안전하고 따뜻한 돌봄을 제공합니다.</span>
           </p>
         </div>
         <div class="rcfe-compare reveal reveal-delay-2">
@@ -294,38 +296,38 @@
             <div class="rcfe-compare__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
             </div>
-            <h3><span class="lang-en">RCFE (Us)</span><span class="lang-kr">RCFE (글로벌 블레싱스)</span></h3>
+            <h3><span class="lang-en" data-cms-id="home-rcfe-us-title-en" data-cms-type="text">RCFE (Us)</span><span class="lang-kr" data-cms-id="home-rcfe-us-title-kr" data-cms-type="text">RCFE (글로벌 블레싱스)</span></h3>
             <ul class="rcfe-list">
-              <li><span class="lang-en">Small, homelike setting</span><span class="lang-kr">소규모 가정형 환경</span></li>
-              <li><span class="lang-en">24-hour supervision</span><span class="lang-kr">24시간 감독</span></li>
-              <li><span class="lang-en">Faith &amp; spiritual care</span><span class="lang-kr">신앙·영적 돌봄</span></li>
-              <li><span class="lang-en">Personalized attention</span><span class="lang-kr">개인 맞춤 지원</span></li>
-              <li><span class="lang-en">Homemade meals</span><span class="lang-kr">가정식 식사 제공</span></li>
-              <li><span class="lang-en">Health counseling</span><span class="lang-kr">건강 상담</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-us1-en" data-cms-type="text">Small, homelike setting</span><span class="lang-kr" data-cms-id="home-rcfe-us1-kr" data-cms-type="text">소규모 가정형 환경</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-us2-en" data-cms-type="text">24-hour supervision</span><span class="lang-kr" data-cms-id="home-rcfe-us2-kr" data-cms-type="text">24시간 감독</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-us3-en" data-cms-type="text">Faith &amp; spiritual care</span><span class="lang-kr" data-cms-id="home-rcfe-us3-kr" data-cms-type="text">신앙·영적 돌봄</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-us4-en" data-cms-type="text">Personalized attention</span><span class="lang-kr" data-cms-id="home-rcfe-us4-kr" data-cms-type="text">개인 맞춤 지원</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-us5-en" data-cms-type="text">Homemade meals</span><span class="lang-kr" data-cms-id="home-rcfe-us5-kr" data-cms-type="text">가정식 식사 제공</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-us6-en" data-cms-type="text">Health counseling</span><span class="lang-kr" data-cms-id="home-rcfe-us6-kr" data-cms-type="text">건강 상담</span></li>
             </ul>
           </div>
           <div class="rcfe-compare__item">
             <div class="rcfe-compare__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
-            <h3><span class="lang-en">Nursing Home</span><span class="lang-kr">요양원</span></h3>
+            <h3><span class="lang-en" data-cms-id="home-rcfe-nh-title-en" data-cms-type="text">Nursing Home</span><span class="lang-kr" data-cms-id="home-rcfe-nh-title-kr" data-cms-type="text">요양원</span></h3>
             <ul class="rcfe-list rcfe-list--muted">
-              <li><span class="lang-en">Large institutional facility</span><span class="lang-kr">대형 기관형 시설</span></li>
-              <li><span class="lang-en">Clinical environment</span><span class="lang-kr">임상적 환경</span></li>
-              <li><span class="lang-en">Less individualized care</span><span class="lang-kr">개인 맞춤 부족</span></li>
-              <li><span class="lang-en">Higher cost</span><span class="lang-kr">높은 비용</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-nh1-en" data-cms-type="text">Large institutional facility</span><span class="lang-kr" data-cms-id="home-rcfe-nh1-kr" data-cms-type="text">대형 기관형 시설</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-nh2-en" data-cms-type="text">Clinical environment</span><span class="lang-kr" data-cms-id="home-rcfe-nh2-kr" data-cms-type="text">임상적 환경</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-nh3-en" data-cms-type="text">Less individualized care</span><span class="lang-kr" data-cms-id="home-rcfe-nh3-kr" data-cms-type="text">개인 맞춤 부족</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-nh4-en" data-cms-type="text">Higher cost</span><span class="lang-kr" data-cms-id="home-rcfe-nh4-kr" data-cms-type="text">높은 비용</span></li>
             </ul>
           </div>
           <div class="rcfe-compare__item">
             <div class="rcfe-compare__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
-            <h3><span class="lang-en">Living Alone</span><span class="lang-kr">혼자 생활</span></h3>
+            <h3><span class="lang-en" data-cms-id="home-rcfe-alone-title-en" data-cms-type="text">Living Alone</span><span class="lang-kr" data-cms-id="home-rcfe-alone-title-kr" data-cms-type="text">혼자 생활</span></h3>
             <ul class="rcfe-list rcfe-list--muted">
-              <li><span class="lang-en">No daily supervision</span><span class="lang-kr">일상 감독 없음</span></li>
-              <li><span class="lang-en">Emergency risks</span><span class="lang-kr">응급 위험 노출</span></li>
-              <li><span class="lang-en">Social isolation</span><span class="lang-kr">사회적 고립</span></li>
-              <li><span class="lang-en">No meal support</span><span class="lang-kr">식사 지원 없음</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-alone1-en" data-cms-type="text">No daily supervision</span><span class="lang-kr" data-cms-id="home-rcfe-alone1-kr" data-cms-type="text">일상 감독 없음</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-alone2-en" data-cms-type="text">Emergency risks</span><span class="lang-kr" data-cms-id="home-rcfe-alone2-kr" data-cms-type="text">응급 위험 노출</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-alone3-en" data-cms-type="text">Social isolation</span><span class="lang-kr" data-cms-id="home-rcfe-alone3-kr" data-cms-type="text">사회적 고립</span></li>
+              <li><span class="lang-en" data-cms-id="home-rcfe-alone4-en" data-cms-type="text">No meal support</span><span class="lang-kr" data-cms-id="home-rcfe-alone4-kr" data-cms-type="text">식사 지원 없음</span></li>
             </ul>
           </div>
         </div>
@@ -360,16 +362,16 @@
       <div class="container">
         <div class="section-header center">
           <span class="eyebrow">
-            <span class="lang-en">What We Offer</span>
-            <span class="lang-kr">제공 서비스</span>
+            <span class="lang-en" data-cms-id="home-svc-eyebrow-en" data-cms-type="text">What We Offer</span>
+            <span class="lang-kr" data-cms-id="home-svc-eyebrow-kr" data-cms-type="text">제공 서비스</span>
           </span>
           <h2 class="reveal">
-            <span class="lang-en">Comprehensive Senior Care</span>
-            <span class="lang-kr">종합 시니어 돌봄</span>
+            <span class="lang-en" data-cms-id="home-svc-title-en" data-cms-type="text">Comprehensive Senior Care</span>
+            <span class="lang-kr" data-cms-id="home-svc-title-kr" data-cms-type="text">종합 시니어 돌봄</span>
           </h2>
           <p class="reveal reveal-delay-1">
-            <span class="lang-en">Every service is delivered with the same commitment: treating every resident as family.</span>
-            <span class="lang-kr">모든 서비스는 한 가지 마음으로, 모든 입주자를 가족처럼.</span>
+            <span class="lang-en" data-cms-id="home-svc-sub-en" data-cms-type="text">Every service is delivered with the same commitment: treating every resident as family.</span>
+            <span class="lang-kr" data-cms-id="home-svc-sub-kr" data-cms-type="text">모든 서비스는 한 가지 마음으로, 모든 입주자를 가족처럼.</span>
           </p>
         </div>
         <div class="grid-3 services-preview__grid">
@@ -377,70 +379,70 @@
             <div class="service-card__icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <h3><span class="lang-en">Personalized Care</span><span class="lang-kr">맞춤 돌봄</span></h3>
-            <p><span class="lang-en">Attentive, personalized support tailored to each resident's unique needs.</span><span class="lang-kr">각 입주자의 필요에 맞춘 개인별 맞춤 돌봄 서비스.</span></p>
+            <h3><span class="lang-en" data-cms-id="home-svc1-title-en" data-cms-type="text">Personalized Care</span><span class="lang-kr" data-cms-id="home-svc1-title-kr" data-cms-type="text">맞춤 돌봄</span></h3>
+            <p><span class="lang-en" data-cms-id="home-svc1-desc-en" data-cms-type="text">Attentive, personalized support tailored to each resident's unique needs.</span><span class="lang-kr" data-cms-id="home-svc1-desc-kr" data-cms-type="text">각 입주자의 필요에 맞춘 개인별 맞춤 돌봄 서비스.</span></p>
           </div>
           <div class="service-card reveal reveal-delay-1">
             <div class="service-card__icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <h3><span class="lang-en">Spiritual Care &amp; Prayer</span><span class="lang-kr">영적 돌봄 및 기도</span></h3>
-            <p><span class="lang-en">Faith centered support, prayer, and spiritual encouragement every day.</span><span class="lang-kr">매일의 기도와 영적 격려, 신앙 중심의 따뜻한 돌봄.</span></p>
+            <h3><span class="lang-en" data-cms-id="home-svc2-title-en" data-cms-type="text">Spiritual Care &amp; Prayer</span><span class="lang-kr" data-cms-id="home-svc2-title-kr" data-cms-type="text">영적 돌봄 및 기도</span></h3>
+            <p><span class="lang-en" data-cms-id="home-svc2-desc-en" data-cms-type="text">Faith centered support, prayer, and spiritual encouragement every day.</span><span class="lang-kr" data-cms-id="home-svc2-desc-kr" data-cms-type="text">매일의 기도와 영적 격려, 신앙 중심의 따뜻한 돌봄.</span></p>
           </div>
           <div class="service-card reveal reveal-delay-2">
             <div class="service-card__icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14 4 9l5-5"/><path d="m15 14 5-5-5-5"/></svg>
             </div>
-            <h3><span class="lang-en">Health Counseling</span><span class="lang-kr">건강 상담</span></h3>
-            <p><span class="lang-en">Expert health counseling and personalized wellness plans for each resident.</span><span class="lang-kr">전문 건강 상담과 맞춤형 웰니스 플랜 제공.</span></p>
+            <h3><span class="lang-en" data-cms-id="home-svc3-title-en" data-cms-type="text">Health Counseling</span><span class="lang-kr" data-cms-id="home-svc3-title-kr" data-cms-type="text">건강 상담</span></h3>
+            <p><span class="lang-en" data-cms-id="home-svc3-desc-en" data-cms-type="text">Expert health counseling and personalized wellness plans for each resident.</span><span class="lang-kr" data-cms-id="home-svc3-desc-kr" data-cms-type="text">전문 건강 상담과 맞춤형 웰니스 플랜 제공.</span></p>
           </div>
         </div>
         <!-- All Included Services -->
-        <div class="reveal" style="margin-top:var(--space-10);padding:var(--space-10) var(--space-8);background:#fff;border-radius:20px;border:1px solid rgba(107,98,89,0.12);box-shadow:0 4px 24px rgba(44,58,46,0.06);">
+        <div class="reveal" style="margin-top:var(--space-10);padding:var(--space-10) var(--space-8);background:#fff;border-radius:20px;border:1px solid rgba(107,98,89,0.12);box-shadow:0 4px 24px rgba(46,111,153,0.08);">
           <p class="eyebrow" style="text-align:center;margin-bottom:var(--space-3);">
-            <span class="lang-en">What Is Included</span>
-            <span class="lang-kr">포함 서비스 전체</span>
+            <span class="lang-en" data-cms-id="home-included-eyebrow-en" data-cms-type="text">What Is Included</span>
+            <span class="lang-kr" data-cms-id="home-included-eyebrow-kr" data-cms-type="text">포함 서비스 전체</span>
           </p>
           <p style="text-align:center;color:#3D3530;font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-8);">
-            <span class="lang-en">Every service below is included in our residential care.</span>
-            <span class="lang-kr">아래 모든 서비스가 거주 돌봄에 포함됩니다.</span>
+            <span class="lang-en" data-cms-id="home-included-sub-en" data-cms-type="text">Every service below is included in our residential care.</span>
+            <span class="lang-kr" data-cms-id="home-included-sub-kr" data-cms-type="text">아래 모든 서비스가 거주 돌봄에 포함됩니다.</span>
           </p>
           <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4) var(--space-8);list-style:none;padding:0;margin:0;">
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">24-Hour Supervision</span><span class="lang-kr">24시간 상시 감독</span>
+              <span class="lang-en" data-cms-id="home-incl1-en" data-cms-type="text">24-Hour Supervision</span><span class="lang-kr" data-cms-id="home-incl1-kr" data-cms-type="text">24시간 상시 감독</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Medication Assistance</span><span class="lang-kr">투약 관리 지원</span>
+              <span class="lang-en" data-cms-id="home-incl2-en" data-cms-type="text">Medication Assistance</span><span class="lang-kr" data-cms-id="home-incl2-kr" data-cms-type="text">투약 관리 지원</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Hospice Care Support</span><span class="lang-kr">호스피스 케어 지원</span>
+              <span class="lang-en" data-cms-id="home-incl3-en" data-cms-type="text">Hospice Care Support</span><span class="lang-kr" data-cms-id="home-incl3-kr" data-cms-type="text">호스피스 케어 지원</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Assisted Living Waiver (ALW) Services</span><span class="lang-kr">생활보조금 (ALW) 서비스</span>
+              <span class="lang-en" data-cms-id="home-incl4-en" data-cms-type="text">Assisted Living Waiver (ALW) Services</span><span class="lang-kr" data-cms-id="home-incl4-kr" data-cms-type="text">생활보조금 (ALW) 서비스</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Home Cooked Meals</span><span class="lang-kr">가정식 식사 제공</span>
+              <span class="lang-en" data-cms-id="home-incl5-en" data-cms-type="text">Home Cooked Meals</span><span class="lang-kr" data-cms-id="home-incl5-kr" data-cms-type="text">가정식 식사 제공</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Housekeeping and Laundry</span><span class="lang-kr">청소 및 세탁 서비스</span>
+              <span class="lang-en" data-cms-id="home-incl6-en" data-cms-type="text">Housekeeping and Laundry</span><span class="lang-kr" data-cms-id="home-incl6-kr" data-cms-type="text">청소 및 세탁 서비스</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Daily Living Assistance</span><span class="lang-kr">일상생활 보조</span>
+              <span class="lang-en" data-cms-id="home-incl7-en" data-cms-type="text">Daily Living Assistance</span><span class="lang-kr" data-cms-id="home-incl7-kr" data-cms-type="text">일상생활 보조</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Professional Counseling and Guidance</span><span class="lang-kr">전문 상담 및 지도</span>
+              <span class="lang-en" data-cms-id="home-incl8-en" data-cms-type="text">Professional Counseling and Guidance</span><span class="lang-kr" data-cms-id="home-incl8-kr" data-cms-type="text">전문 상담 및 지도</span>
             </li>
-            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:#2C3A2E;">
+            <li style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-base);font-weight:600;color:var(--walnut);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2.5" aria-hidden="true" style="flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span class="lang-en">Spiritual Care and Prayer Support</span><span class="lang-kr">영적 돌봄 및 기도 지원</span>
+              <span class="lang-en" data-cms-id="home-incl9-en" data-cms-type="text">Spiritual Care and Prayer Support</span><span class="lang-kr" data-cms-id="home-incl9-kr" data-cms-type="text">영적 돌봄 및 기도 지원</span>
             </li>
           </ul>
         </div>
@@ -448,44 +450,44 @@
         <!-- Health Counseling Pricing Preview -->
         <div style="text-align:center;margin-top:var(--space-14);margin-bottom:var(--space-6)">
           <p class="eyebrow">
-            <span class="lang-en">Health Counseling</span>
-            <span class="lang-kr">건강 상담 서비스</span>
+            <span class="lang-en" data-cms-id="home-price-eyebrow-en" data-cms-type="text">Health Counseling</span>
+            <span class="lang-kr" data-cms-id="home-price-eyebrow-kr" data-cms-type="text">건강 상담 서비스</span>
           </p>
           <h3 class="reveal" style="margin-top:var(--space-2)">
-            <span class="lang-en">Expert Consultations</span>
-            <span class="lang-kr">전문 건강 상담</span>
+            <span class="lang-en" data-cms-id="home-price-title-en" data-cms-type="text">Expert Consultations</span>
+            <span class="lang-kr" data-cms-id="home-price-title-kr" data-cms-type="text">전문 건강 상담</span>
           </h3>
         </div>
         <div class="pricing-grid">
           <div class="pricing-card reveal">
             <div class="pricing-card__header">
-              <h3><span class="lang-en">Initial Health Assessment</span><span class="lang-kr">초기 건강 평가</span></h3>
+              <h3><span class="lang-en" data-cms-id="price1-name-en" data-cms-type="text">Initial Health Assessment</span><span class="lang-kr" data-cms-id="price1-name-kr" data-cms-type="text">초기 건강 평가</span></h3>
               <div class="pricing-card__price">
-                <span class="price">$150</span>
-                <span class="duration lang-en">1 Hour</span><span class="duration lang-kr">1시간</span>
+                <span class="price" data-cms-id="price1-amount" data-cms-type="text">$150</span>
+                <span class="duration lang-en" data-cms-id="price1-duration-en" data-cms-type="text">1 Hour</span><span class="duration lang-kr" data-cms-id="price1-duration-kr" data-cms-type="text">1시간</span>
               </div>
             </div>
-            <p><span class="lang-en">A comprehensive health evaluation to understand your current status, history, and care goals. The foundation for all personalized care planning.</span><span class="lang-kr">현재 건강 상태, 병력, 돌봄 목표를 파악하는 종합 건강 평가. 맞춤 돌봄 계획의 기초.</span></p>
+            <p><span class="lang-en" data-cms-id="home-price1-desc-en" data-cms-type="text">A comprehensive health evaluation to understand your current status, history, and care goals. The foundation for all personalized care planning.</span><span class="lang-kr" data-cms-id="home-price1-desc-kr" data-cms-type="text">현재 건강 상태, 병력, 돌봄 목표를 파악하는 종합 건강 평가. 맞춤 돌봄 계획의 기초.</span></p>
           </div>
           <div class="pricing-card reveal reveal-delay-1">
             <div class="pricing-card__header">
-              <h3><span class="lang-en">Nutritional Consultation</span><span class="lang-kr">영양 상담</span></h3>
+              <h3><span class="lang-en" data-cms-id="price2-name-en" data-cms-type="text">Nutritional Consultation</span><span class="lang-kr" data-cms-id="price2-name-kr" data-cms-type="text">영양 상담</span></h3>
               <div class="pricing-card__price">
-                <span class="price">$120</span>
-                <span class="duration lang-en">45 Minutes</span><span class="duration lang-kr">45분</span>
+                <span class="price" data-cms-id="price2-amount" data-cms-type="text">$120</span>
+                <span class="duration lang-en" data-cms-id="price2-duration-en" data-cms-type="text">45 Minutes</span><span class="duration lang-kr" data-cms-id="price2-duration-kr" data-cms-type="text">45분</span>
               </div>
             </div>
-            <p><span class="lang-en">Expert guidance on dietary needs, meal planning, and nutritional support to help each resident maintain optimal health.</span><span class="lang-kr">각 입주자의 최적 건강 유지를 위한 식이 요구, 식단 계획, 영양 지원 전문 상담.</span></p>
+            <p><span class="lang-en" data-cms-id="home-price2-desc-en" data-cms-type="text">Expert guidance on dietary needs, meal planning, and nutritional support to help each resident maintain optimal health.</span><span class="lang-kr" data-cms-id="home-price2-desc-kr" data-cms-type="text">각 입주자의 최적 건강 유지를 위한 식이 요구, 식단 계획, 영양 지원 전문 상담.</span></p>
           </div>
           <div class="pricing-card reveal reveal-delay-2">
             <div class="pricing-card__header">
-              <h3><span class="lang-en">Stress Management Session</span><span class="lang-kr">스트레스 관리</span></h3>
+              <h3><span class="lang-en" data-cms-id="price3-name-en" data-cms-type="text">Stress Management Session</span><span class="lang-kr" data-cms-id="price3-name-kr" data-cms-type="text">스트레스 관리</span></h3>
               <div class="pricing-card__price">
-                <span class="price">$100</span>
-                <span class="duration lang-en">45 Min</span><span class="duration lang-kr">45분</span>
+                <span class="price" data-cms-id="price3-amount" data-cms-type="text">$100</span>
+                <span class="duration lang-en" data-cms-id="price3-duration-en" data-cms-type="text">45 Min</span><span class="duration lang-kr" data-cms-id="price3-duration-kr" data-cms-type="text">45분</span>
               </div>
             </div>
-            <p><span class="lang-en">Holistic stress reduction techniques and relaxation strategies to enhance overall wellbeing and quality of life.</span><span class="lang-kr">전인적 스트레스 감소 기법과 이완 전략으로 전반적인 웰빙과 삶의 질 향상.</span></p>
+            <p><span class="lang-en" data-cms-id="home-price3-desc-en" data-cms-type="text">Holistic stress reduction techniques and relaxation strategies to enhance overall wellbeing and quality of life.</span><span class="lang-kr" data-cms-id="home-price3-desc-kr" data-cms-type="text">전인적 스트레스 감소 기법과 이완 전략으로 전반적인 웰빙과 삶의 질 향상.</span></p>
           </div>
         </div>
         <div class="text-center" style="margin-top:var(--space-10);display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap;">
@@ -508,10 +510,10 @@
     <section class="section activities-home" style="padding-block: var(--space-10);">
       <div class="container">
         <div class="section-header center" style="margin-bottom: var(--space-8);">
-          <p class="eyebrow"><span class="lang-en">Daily Programs</span><span class="lang-kr">일상 프로그램</span></p>
+          <p class="eyebrow"><span class="lang-en" data-cms-id="home-daily-eyebrow-en" data-cms-type="text">Daily Programs</span><span class="lang-kr" data-cms-id="home-daily-eyebrow-kr" data-cms-type="text">일상 프로그램</span></p>
           <h2 class="reveal">
-            <span class="lang-en">A Day Full of Purpose &amp; Joy</span>
-            <span class="lang-kr">의미와 기쁨이 넘치는 하루</span>
+            <span class="lang-en" data-cms-id="home-daily-title-en" data-cms-type="text">A Day Full of Purpose &amp; Joy</span>
+            <span class="lang-kr" data-cms-id="home-daily-title-kr" data-cms-type="text">의미와 기쁨이 넘치는 하루</span>
           </h2>
         </div>
         <div class="activities-banner__img activities-banner__img--pc reveal">
@@ -535,35 +537,35 @@
         <div class="grid-2 faith-section__grid">
           <div class="faith-section__text">
             <p class="eyebrow reveal">
-              <span class="lang-en">Faith Based Senior Care with Compassion and Excellence</span>
-              <span class="lang-kr">사랑과 전문성을 갖춘 신앙 기반 Care 서비스</span>
+              <span class="lang-en" data-cms-id="home-faith-eyebrow-en" data-cms-type="text">Faith Based Senior Care with Compassion and Excellence</span>
+              <span class="lang-kr" data-cms-id="home-faith-eyebrow-kr" data-cms-type="text">사랑과 전문성을 갖춘 신앙 기반 Care 서비스</span>
             </p>
             <h2 class="reveal reveal-delay-1">
-              <span class="lang-en">Care for Body, Mind &amp; Spirit.</span>
-              <span class="lang-kr">몸과 마음, 그리고 영혼을 돌보는 따뜻한 섬김.</span>
+              <span class="lang-en" data-cms-id="home-faith-title-en" data-cms-type="text">Care for Body, Mind &amp; Spirit.</span>
+              <span class="lang-kr" data-cms-id="home-faith-title-kr" data-cms-type="text">몸과 마음, 그리고 영혼을 돌보는 따뜻한 섬김.</span>
             </h2>
             <p class="reveal reveal-delay-2">
-              <span class="lang-en">Global Blessings Mission RCFE is more than a care home. Led by an ordained Pastor and Chaplain, we believe that true healing encompasses physical comfort, emotional wellbeing, and spiritual peace.</span>
-              <span class="lang-kr">Global Blessings Mission RCFE는 단순한 요양 시설이 아닙니다. 목사이자 채플린이 운영하는 이곳에서, 진정한 치유는 신체적 안락, 정서적 건강, 영적 평화를 모두 아우른다고 믿습니다.</span>
+              <span class="lang-en" data-cms-id="home-faith-body-en" data-cms-type="text">Global Blessings Mission RCFE is more than a care home. Led by an ordained Pastor and Chaplain, we believe that true healing encompasses physical comfort, emotional wellbeing, and spiritual peace.</span>
+              <span class="lang-kr" data-cms-id="home-faith-body-kr" data-cms-type="text">Global Blessings Mission RCFE는 단순한 요양 시설이 아닙니다. 목사이자 채플린이 운영하는 이곳에서, 진정한 치유는 신체적 안락, 정서적 건강, 영적 평화를 모두 아우른다고 믿습니다.</span>
             </p>
             <div class="faith-pillars reveal reveal-delay-3">
               <div class="faith-pillars__item">
-                <span class="faith-pillars__label lang-en">Body</span>
-                <span class="faith-pillars__label lang-kr">신체</span>
-                <p class="lang-en">Professional care & medical support</p>
-                <p class="lang-kr">전문 돌봄 및 의료 지원</p>
+                <span class="faith-pillars__label lang-en" data-cms-id="home-faithpillar1-en" data-cms-type="text">Body</span>
+                <span class="faith-pillars__label lang-kr" data-cms-id="home-faithpillar1-kr" data-cms-type="text">신체</span>
+                <p class="lang-en" data-cms-id="home-faithpillar1-desc-en" data-cms-type="text">Professional care & medical support</p>
+                <p class="lang-kr" data-cms-id="home-faithpillar1-desc-kr" data-cms-type="text">전문 돌봄 및 의료 지원</p>
               </div>
               <div class="faith-pillars__item">
-                <span class="faith-pillars__label lang-en">Mind</span>
-                <span class="faith-pillars__label lang-kr">정서</span>
-                <p class="lang-en">Counseling, social engagement & family connection</p>
-                <p class="lang-kr">상담, 사회 활동, 가족과의 연결</p>
+                <span class="faith-pillars__label lang-en" data-cms-id="home-faithpillar2-en" data-cms-type="text">Mind</span>
+                <span class="faith-pillars__label lang-kr" data-cms-id="home-faithpillar2-kr" data-cms-type="text">정서</span>
+                <p class="lang-en" data-cms-id="home-faithpillar2-desc-en" data-cms-type="text">Counseling, social engagement & family connection</p>
+                <p class="lang-kr" data-cms-id="home-faithpillar2-desc-kr" data-cms-type="text">상담, 사회 활동, 가족과의 연결</p>
               </div>
               <div class="faith-pillars__item">
-                <span class="faith-pillars__label lang-en">Spirit</span>
-                <span class="faith-pillars__label lang-kr">영혼</span>
-                <p class="lang-en">Prayer, pastoral care & spiritual encouragement</p>
-                <p class="lang-kr">기도, 목회 돌봄, 영적 격려</p>
+                <span class="faith-pillars__label lang-en" data-cms-id="home-faithpillar3-en" data-cms-type="text">Spirit</span>
+                <span class="faith-pillars__label lang-kr" data-cms-id="home-faithpillar3-kr" data-cms-type="text">영혼</span>
+                <p class="lang-en" data-cms-id="home-faithpillar3-desc-en" data-cms-type="text">Prayer, pastoral care & spiritual encouragement</p>
+                <p class="lang-kr" data-cms-id="home-faithpillar3-desc-kr" data-cms-type="text">기도, 목회 돌봄, 영적 격려</p>
               </div>
             </div>
             <a href="about.html" class="btn btn--outline-light reveal reveal-delay-4">
@@ -573,8 +575,8 @@
           </div>
           <div class="faith-section__image reveal">
             <img
-              src="assets/images/prayer.webp"
-              alt="Caregiver gently holding hands with an elderly resident"
+              src="assets/images/faith-prayer-hands.webp" data-cms-id="img-faith" data-cms-type="image"
+              alt="Hands clasped together in prayer, bathed in warm light"
               loading="lazy"
               class="img-warm"
             />
@@ -601,23 +603,23 @@
         </div>
         <div class="gallery-preview__grid reveal">
           <div class="gallery-preview__item gallery-preview__item--tall">
-            <img src="assets/images/g1.webp" alt="Caregiver and senior resident in warm sunlit room" loading="lazy" />
+            <img src="assets/images/g1.webp" data-cms-id="img-home-preview-1" data-cms-type="image" alt="Caregiver and senior resident in warm sunlit room" loading="lazy" />
             <div class="gallery-preview__overlay"></div>
           </div>
           <div class="gallery-preview__item">
-            <img src="assets/images/g3.webp" alt="Caregiver sharing a warm moment with senior resident at dining table" loading="lazy" />
+            <img src="assets/images/g3.webp" data-cms-id="img-home-preview-3" data-cms-type="image" alt="Caregiver sharing a warm moment with senior resident at dining table" loading="lazy" />
             <div class="gallery-preview__overlay"></div>
           </div>
           <div class="gallery-preview__item">
-            <img src="assets/images/g5.webp" alt="Caregivers assisting senior residents in daily activities" loading="lazy" />
+            <img src="assets/images/g5.webp" data-cms-id="img-home-preview-5" data-cms-type="image" alt="Caregivers assisting senior residents in daily activities" loading="lazy" />
             <div class="gallery-preview__overlay"></div>
           </div>
           <div class="gallery-preview__item">
-            <img src="assets/images/g2.webp" alt="Caregiver serving a warm meal to senior resident" loading="lazy" />
+            <img src="assets/images/g2.webp" data-cms-id="img-home-preview-2" data-cms-type="image" alt="Caregiver serving a warm meal to senior resident" loading="lazy" />
             <div class="gallery-preview__overlay"></div>
           </div>
           <div class="gallery-preview__item">
-            <img src="assets/images/g4.webp" alt="Caregiver assisting senior resident in wheelchair" loading="lazy" />
+            <img src="assets/images/g4.webp" data-cms-id="img-home-preview-4" data-cms-type="image" alt="Caregiver assisting senior resident in wheelchair" loading="lazy" />
             <div class="gallery-preview__overlay"></div>
           </div>
         </div>
@@ -637,8 +639,8 @@
           <a href="index.html" class="navbar__logo" style="margin-bottom: var(--space-3); display: inline-flex;">
             <img src="assets/logo/logo.png" alt="Global Blessings Mission RCFE" style="height:160px;width:auto;object-fit:contain;" />
           </a>
-          <p class="lang-en">"Providing compassionate care for body, mind, and spirit."<br/>Los Angeles, CA</p>
-          <p class="lang-kr">"몸과 마음, 그리고 영혼을 돌보는 따뜻한 섬김."<br/>로스앤젤레스, CA</p>
+          <p class="lang-en" data-cms-id="footer-tagline-en" data-cms-type="text">"Providing compassionate care for body, mind, and spirit."<br/>Los Angeles, CA</p>
+          <p class="lang-kr" data-cms-id="footer-tagline-kr" data-cms-type="text">"몸과 마음, 그리고 영혼을 돌보는 따뜻한 섬김."<br/>로스앤젤레스, CA</p>
         </div>
         <div class="footer__col">
           <h4 class="lang-en">Navigation</h4>
@@ -662,16 +664,17 @@
         <div class="footer__col footer__contact">
           <h4 class="lang-en">Contact</h4>
           <h4 class="lang-kr">연락처</h4>
-          <p><span class="lang-en">South Los Angeles, CA</span><span class="lang-kr">남 로스앤젤레스, CA</span></p>
+          <p><span class="lang-en" data-cms-id="addr-en" data-cms-type="text">Los Angeles, CA</span><span class="lang-kr" data-cms-id="addr-kr" data-cms-type="text">로스앤젤레스, CA</span></p>
           <p style="margin-top: var(--space-2);">
-            <a href="tel:3232387088">323-238-7088</a>
+            <a href="tel:3232387088"><span data-cms-id="phone-1" data-cms-type="text">323-238-7088</span></a><br/>
+            <a href="tel:3107807697"><span data-cms-id="phone-2" data-cms-type="text">310-780-7697</span></a>
           </p>
           <p style="margin-top: var(--space-2);">
-            <a href="mailto:gbm3937@gmail.com">gbm3937@gmail.com</a>
+            <a href="mailto:gbm3937@gmail.com"><span data-cms-id="email-main" data-cms-type="text">gbm3937@gmail.com</span></a>
           </p>
           <p style="margin-top: var(--space-2); font-size: var(--text-xs); opacity: 0.6;">
             <span class="lang-en">Mon to Fri, 9:00 AM to 5:00 PM</span>
-            <span class="lang-kr">월~금 오전 9시 – 오후 5시</span>
+            <span class="lang-kr" data-cms-id="hours-kr" data-cms-type="text">월~금 오전 9시 – 오후 5시</span>
           </p>
         </div>
       </div>
@@ -681,6 +684,7 @@
         <div class="footer__bottom-links">
           <a href="#"><span class="lang-en">Privacy Policy</span><span class="lang-kr">개인정보처리방침</span></a>
           <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-kr">문의</span></a>
+          <a href="edit-login.html"><span class="lang-en">Site Management</span><span class="lang-kr">사이트 관리</span></a>
         </div>
       </div>
     </div>
@@ -712,16 +716,16 @@
       <div class="contact-modal__inner">
         <div class="contact-modal__info">
           <p class="eyebrow">
-            <span class="lang-en">Reach Out</span>
-            <span class="lang-kr">문의하기</span>
+            <span class="lang-en" data-cms-id="modal-eyebrow-en" data-cms-type="text">Reach Out</span>
+            <span class="lang-kr" data-cms-id="modal-eyebrow-kr" data-cms-type="text">문의하기</span>
           </p>
           <h2 id="contactModalTitle">
-            <span class="lang-en">We're Here<br/>for You.</span>
-            <span class="lang-kr">언제든지<br/>연락해 주세요.</span>
+            <span class="lang-en" data-cms-id="modal-title-en" data-cms-type="text">We're Here<br/>for You.</span>
+            <span class="lang-kr" data-cms-id="modal-title-kr" data-cms-type="text">언제든지<br/>연락해 주세요.</span>
           </h2>
           <p class="contact-modal__desc">
-            <span class="lang-en">Send us a message and we'll respond with consultation details and a Zoom link to connect with you personally.</span>
-            <span class="lang-kr">문의를 주시면 상담 안내와 함께 Zoom 연결 정보를 보내드립니다.</span>
+            <span class="lang-en" data-cms-id="modal-desc-en" data-cms-type="text">Send us a message and we'll respond with consultation details and a Zoom link to connect with you personally.</span>
+            <span class="lang-kr" data-cms-id="modal-desc-kr" data-cms-type="text">문의를 주시면 상담 안내와 함께 Zoom 연결 정보를 보내드립니다.</span>
           </p>
           <div class="contact-modal__direct">
             <a href="tel:3232387088" class="contact-modal__direct-item">
@@ -733,7 +737,7 @@
                   <span class="lang-en">Call Us</span>
                   <span class="lang-kr">전화 문의</span>
                 </span>
-                <span class="contact-modal__direct-value">323-238-7088</span>
+                <span class="contact-modal__direct-value">323-238-7088 · 310-780-7697</span>
               </div>
             </a>
             <a href="mailto:gbm3937@gmail.com" class="contact-modal__direct-item">

@@ -9,3 +9,9 @@ assets/video/*.tmp
 
 # Local Netlify folder
 .netlify
+
+# Node
+node_modules/
+
+# Netlify CLI local tooling artifact
+deno.lock

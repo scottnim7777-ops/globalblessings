@@ -189,7 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && contactModal.classList.contains('open')) closeModal();
     });
 
-    document.querySelectorAll('a[href="contact.html"]').forEach(link => {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href') || '';
+      if (!/^(\.\/)?\/?contact(\.html)?$/.test(href)) return;
       const inFooter = link.closest('.footer');
       if (!inFooter) {
         link.addEventListener('click', e => { e.preventDefault(); openModal(); });

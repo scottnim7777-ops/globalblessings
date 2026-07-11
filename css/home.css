@@ -336,9 +336,9 @@ html[lang="ko"] .rcfe-compare__item--active::before { content: '추천 시설'; 
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-style: italic;
-  color: var(--gold);
+  color: var(--gold-on-dark);
   margin-bottom: 4px;
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 .faith-pillars__item p {
@@ -353,7 +353,7 @@ html[lang="ko"] .rcfe-compare__item--active::before { content: '추천 시설'; 
 
 @media (max-width: 768px) {
   .faith-section__image { order: -1; }
-  .faith-section__image img { aspect-ratio: 3/2; }
+  .faith-section__image img { aspect-ratio: 4/5; }
 }
 
 /* ============================================================
@@ -433,7 +433,7 @@ html[lang="ko"] .rcfe-compare__item--active::before { content: '추천 시설'; 
   .editorial-values__num { font-size: 2rem; }
 
   /* Faith section image on mobile */
-  .faith-section__image img { aspect-ratio: 16/9; }
+  .faith-section__image img { aspect-ratio: 4/5; }
 
   /* RCFE promo padding */
   .rcfe-promo-banner { padding: 0 0 var(--space-10); }
