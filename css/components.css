@@ -11,14 +11,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   transition: background-color var(--duration-base) var(--ease-out),
               padding var(--duration-base) var(--ease-out),
               box-shadow var(--duration-base) var(--ease-out);
 }
 .navbar--scrolled {
   background-color: var(--ivory);
-  padding: 1rem 0;
+  padding: 0.625rem 0;
   box-shadow: 0 2px 20px rgba(43, 38, 34, 0.08);
 }
 .navbar__inner {
@@ -34,17 +34,17 @@
   flex-shrink: 0;
 }
 .navbar__logo img {
-  height: 80px;
+  height: 120px;
   width: auto;
   object-fit: contain;
   transition: height var(--duration-base) var(--ease-out);
 }
 .navbar--scrolled .navbar__logo img {
-  height: 66px;
+  height: 99px;
 }
 @media (max-width: 768px) {
-  .navbar__logo img { height: 68px; }
-  .navbar--scrolled .navbar__logo img { height: 54px; }
+  .navbar__logo img { height: 102px; }
+  .navbar--scrolled .navbar__logo img { height: 81px; }
 }
 .navbar__nav {
   display: flex;
@@ -263,12 +263,12 @@
   /* logo: can shrink, constrained width so hamburger never gets pushed off */
   .navbar__logo { flex-shrink: 1; min-width: 0; }
   .navbar__logo img {
-    height: 68px;
-    max-width: 180px;
+    height: 102px;
+    max-width: 270px;
     object-fit: contain;
     object-position: left center;
   }
-  .navbar--scrolled .navbar__logo img { height: 54px; }
+  .navbar--scrolled .navbar__logo img { height: 81px; }
   .navbar__inner { gap: 8px; }
   .navbar .container { padding-left: 12px; }
   /* lang toggle: compact but keep flag + text */
