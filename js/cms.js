@@ -35,6 +35,11 @@
       const type = el.getAttribute('data-cms-type');
       if (type === 'image') {
         el.setAttribute('src', data[id]);
+      } else if (type === 'richtext') {
+        const paragraphs = data[id].split(/\n{2,}/).filter((p) => p.trim() !== '');
+        el.innerHTML = paragraphs
+          .map((p) => `<p>${escapeHtml(p).replace(/\n/g, '<br>')}</p>`)
+          .join('');
       } else {
         el.innerHTML = escapeHtml(data[id]).replace(/\n/g, '<br>');
       }
@@ -121,7 +126,28 @@
 
   function saveText(el) {
     const id = el.getAttribute('data-cms-id');
-    const value = el.innerText;
+    const before = el.dataset.cmsBefore || '';
+    let value = el.innerText;
+
+    // Safety net: if almost all the previous content just got wiped out
+    // (e.g. an accidental select-all + delete), confirm before saving.
+    const trimmedBefore = before.trim();
+    const trimmedNow = value.trim();
+    if (trimmedBefore.length > 20 && trimmedNow.length < trimmedBefore.length * 0.15) {
+      const proceed = window.confirm(
+        '내용을 대부분 지우셨어요. 이대로 저장할까요?\n취소를 누르면 원래 내용으로 되돌아갑니다.'
+      );
+      if (!proceed) {
+        el.innerText = before;
+        return;
+      }
+    }
+
+    if (trimmedNow === '') {
+      el.innerHTML = ''; // clear stray <br> left by contenteditable so empty-state styling applies
+      value = '';
+    }
+
     fetch('/.netlify/functions/content-save', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -132,8 +158,10 @@
       .catch(() => showToast('저장 실패'));
   }
 
+  const EDITABLE_SELECTOR = '[data-cms-type="text"], [data-cms-type="richtext"]';
+
   function wireTextEditing() {
-    document.querySelectorAll('[data-cms-type="text"]').forEach((el) => {
+    document.querySelectorAll(EDITABLE_SELECTOR).forEach((el) => {
       if (el.dataset.cmsWired) return;
       el.dataset.cmsWired = '1';
       el.addEventListener('focus', () => {
@@ -153,11 +181,11 @@
 
   function setEditMode(on) {
     document.body.classList.toggle('cms-edit-mode', on);
-    document.querySelectorAll('[data-cms-type="text"]').forEach((el) => {
+    document.querySelectorAll(EDITABLE_SELECTOR).forEach((el) => {
       el.setAttribute('contenteditable', on ? 'true' : 'false');
     });
     localStorage.setItem(LS_KEY, on ? '1' : '0');
-    const toggleBtn = document.querySelector('.cms-fab__toggle span');
+    const toggleBtn = document.querySelector('.cms-fab__toggle .cms-fab__label');
     if (toggleBtn) toggleBtn.textContent = on ? '편집 켜짐' : '편집 모드';
   }
 
@@ -168,10 +196,11 @@
     const fab = document.createElement('div');
     fab.className = 'cms-fab';
     fab.innerHTML =
-      '<button type="button" class="cms-fab__toggle"><span class="cms-dot"></span><span>편집 모드</span></button>' +
+      '<button type="button" class="cms-fab__toggle"><span class="cms-dot"></span><span class="cms-fab__label">편집 모드</span></button>' +
       '<div class="cms-panel">' +
       '<h4>편집 모드 안내</h4>' +
       '<p>텍스트를 클릭하면 바로 수정할 수 있어요. 다 쓰고 다른 곳을 누르면 자동으로 저장됩니다. 사진은 사진 위에 마우스를 올리면 \'사진 바꾸기\' 버튼이 나와요.</p>' +
+      '<p class="cms-panel__notice">이 버튼은 로그인하신 관리자님에게만 보여요. 다른 방문자에게는 절대 보이지 않으니 안심하세요.</p>' +
       '<button type="button" class="cms-panel__logout">로그아웃</button>' +
       '</div>';
     document.body.appendChild(fab);
@@ -194,6 +223,13 @@
     const savedOn = stored === null ? true : stored === '1';
     if (savedOn) {
       setEditMode(true);
+    }
+
+    // Right after a fresh login, briefly show the panel so the admin sees the
+    // "visitors can't see this" reassurance without having to click anything.
+    const justLoggedIn = document.referrer.indexOf('edit-login.html') !== -1;
+    if (justLoggedIn) {
+      panel.classList.add('cms-open');
     }
   }
 

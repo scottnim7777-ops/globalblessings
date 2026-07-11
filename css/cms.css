@@ -60,21 +60,77 @@ body.cms-edit-mode .cms-fab__toggle { background: #B8893B; }
   margin-bottom: 8px;
 }
 .cms-panel__logout { background: #F0EAE0; color: #2B2622; }
+.cms-panel__notice {
+  background: rgba(46, 111, 153, 0.08);
+  border-left: 3px solid #2E6F99;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: #2B2622;
+}
 
 /* Editable text elements */
-body.cms-edit-mode [data-cms-type="text"] {
+body.cms-edit-mode :is([data-cms-type="text"], [data-cms-type="richtext"]) {
   outline: 2px dashed rgba(46, 111, 153, 0.55);
   outline-offset: 4px;
   border-radius: 3px;
   cursor: text;
   transition: background-color 0.15s;
 }
-body.cms-edit-mode [data-cms-type="text"]:hover {
+body.cms-edit-mode :is([data-cms-type="text"], [data-cms-type="richtext"]):hover {
   background-color: rgba(46, 111, 153, 0.08);
 }
-body.cms-edit-mode [data-cms-type="text"]:focus {
+body.cms-edit-mode :is([data-cms-type="text"], [data-cms-type="richtext"]):focus {
   outline: 2px solid #2E6F99;
   background-color: rgba(46, 111, 153, 0.12);
+}
+
+/* On dark/blue-background sections the blue dashed outline blends into the
+   background and looks uneditable. Use a light outline there instead. */
+body.cms-edit-mode .section--dark :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .rcfe-compare__item--active :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .trust-bar :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .page-hero :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .contact-modal__info :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .quick-contact :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .footer :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .mobile-menu :is([data-cms-type="text"], [data-cms-type="richtext"]),
+body.cms-edit-mode .mobile-call-bar :is([data-cms-type="text"], [data-cms-type="richtext"]) {
+  outline-color: rgba(255, 255, 255, 0.75);
+}
+body.cms-edit-mode .section--dark :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .rcfe-compare__item--active :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .trust-bar :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .page-hero :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .contact-modal__info :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .quick-contact :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .footer :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .mobile-menu :is([data-cms-type="text"], [data-cms-type="richtext"]):hover,
+body.cms-edit-mode .mobile-call-bar :is([data-cms-type="text"], [data-cms-type="richtext"]):hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+body.cms-edit-mode .section--dark :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .rcfe-compare__item--active :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .trust-bar :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .page-hero :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .contact-modal__info :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .quick-contact :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .footer :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .mobile-menu :is([data-cms-type="text"], [data-cms-type="richtext"]):focus,
+body.cms-edit-mode .mobile-call-bar :is([data-cms-type="text"], [data-cms-type="richtext"]):focus {
+  outline-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Empty editable text: hide for real visitors (no awkward blank gap),
+   but show a friendly placeholder for the owner while in edit mode. */
+body:not(.cms-edit-mode) :is([data-cms-type="text"], [data-cms-type="richtext"]):empty {
+  display: none;
+}
+body.cms-edit-mode :is([data-cms-type="text"], [data-cms-type="richtext"]):empty::before {
+  content: '(비어있음 - 클릭해서 입력하세요)';
+  color: rgba(46, 111, 153, 0.6);
+  font-style: italic;
 }
 
 /* Editable images */
@@ -122,7 +178,8 @@ body.cms-edit-mode .cms-img-wrap .cms-img-btn { display: flex; }
   transform: translateX(-50%) translateY(0);
 }
 
-@media (max-width: 600px) {
-  .cms-fab { right: 12px; bottom: 12px; }
-  .cms-panel { right: 12px; left: 12px; width: auto; bottom: 78px; }
+@media (max-width: 768px) {
+  /* Sit above the fixed mobile "Call Now" bar so the two never overlap */
+  .cms-fab { right: 12px; bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+  .cms-panel { right: 12px; left: 12px; width: auto; bottom: calc(146px + env(safe-area-inset-bottom, 0px)); }
 }
