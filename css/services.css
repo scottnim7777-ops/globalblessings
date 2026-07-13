@@ -28,6 +28,48 @@
 .pricing-card .btn { margin-top: auto; }
 @media(max-width:900px){ .pricing-grid{ grid-template-columns:1fr; max-width:480px; margin-inline:auto; } }
 
+/* Zelle payment card */
+.zelle-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 4px;
+  padding: var(--space-6);
+}
+.zelle-card__qr {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+.zelle-card__qr img { display: block; width: 120px; height: 120px; }
+.zelle-card__qr-caption {
+  font-size: var(--text-xs);
+  color: #6B6259;
+}
+.zelle-card__info { flex: 1; }
+.zelle-card__badge {
+  display: inline-block;
+  background: #6D1ED4;
+  color: var(--white);
+  font-family: var(--font-display-en);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-1);
+}
+.zelle-card__info h3 { font-size: var(--text-lg); margin: 0 0 0.4rem; }
+.zelle-card__info p { font-size: var(--text-sm); color: #6B6259; margin: 0; line-height: 1.7; }
+@media(max-width:640px){
+  .zelle-card { flex-direction: column; text-align: center; }
+}
+
 /* Activities banner */
 .activities-banner__img {
   border-radius: 16px;
